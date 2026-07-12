@@ -1,0 +1,7 @@
+### The French Protectorate and Economic Boom
+
+The 19th century brought increased trade with Europe, and Casablanca's population began to grow. Its modern transformation began in the early 20th century. In July 1907, the French operated a small 'decauville' train for the construction works of the port (a simple dock at the time). The track runs through the nearby cemetery of the Sidi Beliout sanctuary, disturbing the serenity of the place. A popular riot erupts against the European workers, of whom 7 are killed. France sends troops to restore order, as the Chaouia tribes have also attacked the city and looted the Mellah (Jewish quarter).
+ 
+With the official establishment of the **French Protectorate** in 1912, Casablanca was designated as the main economic hub of French Morocco. The French architect and urban planner **Henri Prost** was commissioned to design the modern city. He laid out a new city center (the Ville Nouvelle) outside the walls of the old medina, with wide boulevards, grand public squares like Place Mohammed V, and impressive Mauresque and Art Deco style buildings.
+
+A modern port was constructed, and the city experienced an explosive economic and demographic boom, attracting Moroccans from across the country as well as European expatriates. It quickly became the country's largest and most important city.

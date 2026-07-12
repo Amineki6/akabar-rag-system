@@ -1,0 +1,14 @@
+The history of the French occupation of Tiznit is a significant chapter in the city's past, marked by its strategic importance and the strong local resistance it faced. Tiznit's story during the French Protectorate is closely tied to its role as a religious and tribal center in the Souss region.
+
+### The Rise of El Hiba and the Resistance
+* **Pre-Occupation:** Before the French arrived, Tiznit was a major hub for trade and religious life. In the early 20th century, it became the center of a resistance movement led by **Mā al-ʻAynayn**, a charismatic religious and political leader. He proclaimed himself Sultan in 1910 and rallied the tribes of the Sahara and the Anti-Atlas against the French.
+* **The Role of El Hiba:** After Mā al-ʻAynayn's death, his son, **Ahmed al-Hiba**, took up the mantle of resistance. In 1912, he was proclaimed Sultan in Tiznit and marched north to confront the French. The city served as the spiritual and military capital of his movement, which saw fierce fighting against the colonial forces. Although Al-Hiba's forces were defeated at the Battle of Sidi Bou Othman, Tiznit remained a bastion of opposition.
+
+### The French "Pacification" of Tiznit
+* **The "Pacification" of the Souss:** The French faced considerable challenges in gaining control over the mountainous and desert regions of southern Morocco, including the Souss and the Anti-Atlas. The campaign to subdue the area was protracted and often brutal, lasting until the early 1930s.
+* **Tiznit's Surrender:** Despite the powerful resistance, Tiznit was eventually brought under French control. The city's surrender was more of a gradual process than a single decisive battle, as the French forces, with superior military technology, slowly surrounded and isolated the resistance movements in the region.
+
+### Life Under the Protectorate
+* **Administrative Center:** Once under their control, the French designated Tiznit as an important administrative and military center for the Protectorate in the south. The colonial administration established new infrastructure, including a garrison, to manage the region.
+* **The "Ville Nouvelle" (New City):** Similar to other Moroccan cities, the French built a *ville nouvelle* outside the old medina walls. This new part of the city was designed with a grid-like street plan and modern buildings to house French administrators and their families. While the architecture and layout were French, the design of the new city often incorporated local elements, creating a unique blend of styles.
+* **Legacy:** The French occupation left a lasting mark on Tiznit's urban landscape and political structure. However, the city's historical role as a center of resistance and its strong local identity, particularly its renowned silver jewelry trade, remain central to its character today.

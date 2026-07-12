@@ -1,0 +1,3 @@
+### Overview of Marrakech's Emergency & Medical Services
+
+Key safety and medical information for Marrakech. One file lists important emergency contact numbers, including 190 for Police, 150 for Ambulance and Fire Department services, and 177 for the Royal Gendarmerie, which serves areas outside of major cities. The other document identifies several local medical facilities, including hospitals such as Ibn Tofeil, Arrazi, Ibn Zohr, and the Ibn Nafis University Psychiatric Center.

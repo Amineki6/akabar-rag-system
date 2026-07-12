@@ -1,0 +1,3 @@
+### Overview of Agadir's Emergency & Medical Services
+
+These documents contain key safety and medical information for the Agadir area. One file lists important emergency contact numbers, including 190 for Police, 150 for Ambulance and Fire Department services, and 177 for the Royal Gendarmerie, which serves areas outside of major cities. The other document identifies several local hospitals, such as the Hassan II Regional Hospital, the Centre d'Oncologie d'Agadir, Hôpital Mokhtar Soussi, and Hôpital Inezgane.

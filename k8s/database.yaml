@@ -1,0 +1,65 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mongo-pvc
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-path  # This is the built-in K3s storage provider
+  resources:
+    requests:
+      storage: 5Gi              # Requesting 5GB from your 30GB root disk
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo
+  namespace: default
+spec:
+  ports:
+    - port: 27017
+      targetPort: 27017
+  selector:
+    app: akabar-db
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akabar-db
+  namespace: default
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akabar-db
+  template:
+    metadata:
+      labels:
+        app: akabar-db
+    spec:
+      containers:
+      - name: mongo
+        image: mongo:5.0
+        ports:
+        - containerPort: 27017
+        env:
+          - name: MONGO_INITDB_ROOT_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: akabar-secrets
+                key: MONGO_USER
+          - name: MONGO_INITDB_ROOT_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: akabar-secrets
+                key: MONGO_PASSWORD
+        volumeMounts:
+        - name: mongo-storage
+          mountPath: /data/db
+      volumes:
+      - name: mongo-storage
+        persistentVolumeClaim:    # <--- This is the change
+          claimName: mongo-pvc    # Connects to the PVC defined in Step 1

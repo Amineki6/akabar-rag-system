@@ -1,0 +1,3 @@
+### Overview of Rabat's Emergency & Medical Services
+
+These documents provide essential safety and medical information for the Rabat area. One file lists important emergency contact numbers, including 190 for Police, 150 for Ambulance and Fire Department services, and 177 for the Royal Gendarmerie, which serves areas outside of major cities. The other document identifies several local medical facilities in the Rabat-Salé metropolitan area, including the Ibn Sina and My Youssef hospitals in Rabat, and the El Ayachi and Arrazi hospitals in Salé.

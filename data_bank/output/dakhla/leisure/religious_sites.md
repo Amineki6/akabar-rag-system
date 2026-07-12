@@ -1,0 +1,3 @@
+The Bait Mosque مسجد البيعة  is one of the most prominent religious sites in the city of Dakhla, and it is an important spiritual center for performing prayers and organizing religious and educational activities in the city.
+
+The Dirham Mosque  مسجد الدرهم  is considered one of the most important mosques in the vibrant capital of the Wadi Doukkala region, which attracts a large number of citizens, especially during the times of Taraweeh and Tahajjud prayers, given its central location in the city, its significant capacity, and its influential role at the local level.

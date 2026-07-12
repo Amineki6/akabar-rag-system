@@ -1,0 +1,7 @@
+### Overview of Transportation in Casablanca
+
+The provided documents describe Casablanca's transportation system, with Mohammed V International Airport (CMN) being the primary international gateway, located about 30 km from the city. For travel from the airport to the city, the most convenient option is often the train, which connects directly to Casablanca's main stations. Grand Taxis and CTM buses are also available.
+
+For getting around the city, the Casa Tramway is the most modern and efficient public transport method, featuring two lines and over 70 stations. Local public buses are the most inexpensive option, with single journeys costing 4 dirhams. The city's taxi service is divided into two types: red 'Petit Taxis' for private trips within the city limits and white 'Grand Taxis' which are shared and used for set routes and longer distances.
+
+For intercity travel, the main bus station is the Gare Routière Ouled Ziane, which connects Casablanca to other destinations across Morocco. Renting a car is another option for exploring the surrounding areas, with numerous international agencies at the airport. However, the documents note that driving in Casablanca can be challenging due to hectic traffic.

@@ -1,0 +1,7 @@
+### Overview of Transportation in Marrakech
+
+The provided documents describe Marrakech's transportation network, which is served by the Marrakech-Menara Airport (RAK), located approximately 6 km from the city center. For ground transport from the airport, options include the highly recommended ALSA Bus Route 19, official taxis which have fixed rates displayed on a price board, and pre-booked private transfers.
+
+For travel within the city, there is an extensive and affordable public bus network operated by ALSA, with a standard single journey costing around 4 MAD. Taxis are also a common mode of transport and are divided into two types: yellowish/beige 'Petit Taxis' for metered trips within the city limits and larger 'Grand Taxis' for longer, fixed-fare journeys to destinations outside the city. The documents explicitly state that there are no tramways in Marrakech.
+
+For intercity travel, Marrakech has two main hubs. The Gare Routière at Bab Doukkala is the main bus station for regional and long-distance buses. The Gare de Marrakech, the city's primary train station located in Gueliz, connects to other major Moroccan cities like Casablanca and Fes. Renting a car is also an option for exploring the surrounding regions, though driving within the narrow streets of the Medina is not recommended.

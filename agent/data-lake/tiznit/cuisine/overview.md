@@ -1,0 +1,3 @@
+A Guide to tiznit's Cuisine
+
+exploring the small alleys of the medina to uncover hidden culinary treasures run by local families for generations. For a unique experience, participate in a cooking workshop at a local's home, where you will learn to prepare a traditional meal while sharing a special moment with locals. Prices remain very affordable, with traditional dishes starting from 5-8€ and teas for less than 2€. Discover local cuisine at the stalls of the souk or in the small restaurants frequented by locals.

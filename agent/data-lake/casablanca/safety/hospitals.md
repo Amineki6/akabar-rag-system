@@ -1,0 +1,15 @@
+### Hospitals in Casablanca Area
+
+* **20 Aout 1953** (Interregional Hospital - HIR)
+* **Ibn Rochd** (Interregional Hospital - HIR)
+* **Hôpital D'enfants** (Interregional Hospital - HIR)
+* **My Youssef** (Regional Hospital - HR)
+* **Mohamed Baouafi** (Provincial/Prefectoral Hospital - HP)
+* **Mohamed V** (Provincial/Prefectoral Hospital - HP)
+* **El Hassani** (Provincial/Prefectoral Hospital - HP)
+* **Centre de Léprologie** (Provincial/Prefectoral Hospital - HP)
+* **Mohamed Sekkat** (Provincial/Prefectoral Hospital - HP)
+* **Al Mansour** (Provincial/Prefectoral Hospital - HP)
+* **HPr Sidi Moumen** (Proximity Hospital - HPr)
+* **Ben Msick** (Provincial/Prefectoral Hospital - HP)
+* **Sidi Othmane** (Provincial/Prefectoral Hospital - HP)

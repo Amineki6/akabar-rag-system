@@ -1,0 +1,3 @@
+A Guide to Taroudant's Cuisine
+
+The restaurants in Taroudant are numerous. The cuisine is often simple but affordable, highlighting authentic and local flavors. Do not hesitate to ask for house specialties or daily dishes for a more personalized experience. Also, enjoy the local markets and small stalls to discover the spices, almonds, essential oils, saffron, and other typical products that characterize the region.

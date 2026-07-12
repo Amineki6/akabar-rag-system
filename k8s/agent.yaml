@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: agent
+  namespace: default
+spec:
+  selector:
+    app: akabar-agent         # This finds the pods labeled "akabar-agent" defined above
+  ports:
+    - protocol: TCP
+      port: 5005              # The port the Service listens on
+      targetPort: 5005        # The port the Container is listening on
+  type: ClusterIP           # Internal only (we will expose it differently later)
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akabar-agent
+  namespace: default
+spec:
+  revisionHistoryLimit: 1
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akabar-agent
+  template:
+    metadata:
+      labels:
+        app: akabar-agent
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+      - name: agent
+        image: mkina66/akabar-agent:sha-7be45cf
+        ports:
+        - containerPort: 5005
+        envFrom:
+        - secretRef:
+            name: akabar-secrets

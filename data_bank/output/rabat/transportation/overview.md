@@ -1,0 +1,7 @@
+### Overview of Transportation in Rabat
+
+The provided documents describe the transportation network serving Rabat and its sister city, Salé, which is primarily served by the Rabat–Salé Airport (RBA), located 8 km from Rabat's city center. Ground transport options from the airport include a dedicated Airport Express (AE) bus, Grand Taxis, and car rental services.
+
+For local travel, the modern Rabat-Salé Tramway is an efficient option, with two lines connecting key areas in both cities for a fare of 6 MAD per journey. The ALSA public bus network provides an extensive and affordable alternative, with a standard ticket costing around 5 MAD. The taxi system is divided into two distinct types: blue 'Petit Taxis' are used for metered trips within the limits of a single city (either Rabat or Salé), while larger 'Grand Taxis' are used for longer, negotiated-fare journeys, including travel between the two cities.
+
+For intercity travel to other destinations in Morocco, the Gare Routière de Kamra serves as the main bus terminal. Renting a car is also a practical option for exploring the region, with agencies located at the airport and in the city. Driving in Rabat is on the right side of the road and is generally considered less chaotic than in other major Moroccan cities.

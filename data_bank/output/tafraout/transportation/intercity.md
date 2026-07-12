@@ -1,0 +1,2 @@
+Bus
+Tafraout offers an air-conditioned bus network connecting Tafraoute to several cities such as Agadir, Casablanca, Essaouira, and Tiznit. Tickets can be booked. The services range from standard to sleeper, suitable for long distances or overnight travel. The main bus stations serving Tafraoute via buses are Inezgane, Agadir, Casablanca, Essaouira, and Tiznit. Car rental is convenient for exploring the mountainous region and accessing natural sites like the Aït Mansour gorges or the painted rocks.

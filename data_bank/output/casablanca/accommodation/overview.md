@@ -1,0 +1,3 @@
+### Overview of Accommodation Types in Casablanca
+
+This document outlines the various accommodation options available in Casablanca. As a primary commercial hub, the city offers many high-end luxury and business hotels, which are typically located in the city center and the upscale Anfa neighborhood. For travelers looking for more independence or planning longer stays, the city has apartment hotels that blend hotel services with self-catering facilities, as well as private apartments for rent. Budget-conscious travelers can find modern hostels, while those seeking a more authentic experience can stay in guesthouses, though it is noted that traditional Riads are less common in Casablanca than in other Moroccan cities.

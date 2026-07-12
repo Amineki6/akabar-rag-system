@@ -1,0 +1,5 @@
+### Overview of Casablanca's Cuisine
+
+Casablanca's culinary offerings, which are strongly influenced by its coastal setting. Signature dishes prominently feature fresh seafood, such as grilled and fried fish, which can be selected directly by customers and cooked on the spot at the Marché Central (Central Market). The city also has its own coastal versions of national dishes, including Fish Tagine and Seafood Pastilla. These are offered alongside Moroccan staples like couscous, Harira soup, and grilled brochettes.
+
+For dining, the files suggest various neighborhoods catering to different tastes. The Marché Central is highlighted as the premier destination for an authentic seafood lunch. The Old Medina is recommended for its affordable, no-frills eateries and street food stalls. For a more traditional restaurant experience and classic Moroccan sweets, the Habous Quarter is the go-to area. For upscale and international dining, options include the seaside promenade of the Corniche, which features fine dining restaurants with ocean views, and the modern neighborhoods of Gauthier and Maarif, known for their trendy cafes and diverse international cuisine.

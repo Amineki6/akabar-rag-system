@@ -1,0 +1,5 @@
+### Early History and Almohad Glory
+
+While the Romans had a settlement called Sala Colonia on a nearby site (now the Chellah), the history of Rabat proper began in the 12th century. The Almohad Caliph **Abd al-Mu'min** established a 'ribat' (a fortified monastery or fortress) on the site of the current Kasbah of the Udayas. This ribat served as a base for his armies as they launched campaigns into Spain.
+
+The city's golden age came under Abd al-Mu'min's grandson, **Abu Yusuf Yaqub al-Mansur**, in the late 12th century. He envisioned a grand capital city, which he named **Ribat al-Fath** ("The Fortress of Victory"). He embarked on an ambitious building program, constructing the magnificent gate of the Kasbah (Bab Oudaia) and expanding the city walls. His most ambitious project was a colossal mosque intended to be the largest in the world, of which only the impressive, unfinished **Hassan Tower** and its forest of stone columns remain. After al-Mansur's death, the project was abandoned, and Rabat entered a long period of decline.

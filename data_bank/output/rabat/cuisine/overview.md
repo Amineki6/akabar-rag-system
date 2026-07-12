@@ -1,0 +1,5 @@
+### Overview of Rabat's Cuisine
+
+The provided documents describe Rabat's culinary scene as offering a rich variety of classic Moroccan dishes, with a notable emphasis on fresh seafood due to its coastal location. Signature dishes widely available include the iconic slow-cooked Tagine, with local favorites such as chicken with preserved lemons, lamb with prunes, and fresh fish. The national dish of Couscous is traditionally served on Fridays, and other staples like the intricate Pastilla pie, hearty Harira soup, and grilled Brochettes (kebabs) are common throughout the city.
+
+For dining experiences, the city's neighborhoods offer distinct atmospheres. The historic Medina is the best place to find traditional, family-run eateries serving authentic Moroccan home cooking. The modern downtown (Ville Nouvelle) features a mix of French-style brasseries and established Moroccan restaurants. The trendy and upscale Agdal neighborhood is known for its contemporary and international dining scene, with cuisines from around the world. For a more upscale experience, the area around the Bou Regreg river marina offers modern restaurants with stunning waterfront views.

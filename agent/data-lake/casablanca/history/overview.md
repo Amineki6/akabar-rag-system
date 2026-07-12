@@ -1,0 +1,7 @@
+### Overview of Casablanca's History
+
+The provided documents trace the history of Casablanca from its ancient origins as a Berber settlement named Anfa in the seventh century BC. It served as a port for Phoenicians and Romans and grew in importance under various dynasties. In the 15th century, Anfa became a harbor for pirates, which led to its destruction by the Portuguese in 1468. The Portuguese rebuilt a settlement on the ruins called Casa Branca, which was later reconstructed between 1756 and 1790 by Sultan Mohammed ben Abdallah, who gave it the Arabic name ad-Dār al-Bayḍāʼ.
+
+The city's modern era began with the French Protectorate in 1912, under which Casablanca was developed into the primary economic hub of French Morocco. Architect Henri Prost was commissioned to design a new city center, which sparked an economic and demographic boom. During World War II, Casablanca was a key strategic site, hosting the Casablanca Conference in 1943 where Allied leaders agreed to the "unconditional surrender" policy for the Axis powers.
+
+After Moroccan independence in 1956, Casablanca solidified its role as the nation's economic and industrial capital. Today, it is the largest city in the Maghreb and a major financial center in Africa, remaining the engine of the Moroccan economy.

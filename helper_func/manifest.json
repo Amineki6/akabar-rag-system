@@ -1,0 +1,207 @@
+{
+  "city_template": {
+    "files": [
+      {
+        "path": "[city]/accommodation/overview.md",
+        "description": "A high-level summary of lodging options in the city."
+      },
+      {
+        "path": "[city]/accommodation/types.md",
+        "description": "Details the different types of accommodations available."
+      },
+      {
+        "path": "[city]/cuisine/overview.md",
+        "description": "Provides a general overview of the local food scene, dining culture, and the types of cuisine available."
+      },
+      {
+        "path": "[city]/cuisine/food_places.md",
+        "description": "Lists and recommends specific places to eat, including restaurants, cafes, and popular street food spots."
+      },
+      {
+        "path": "[city]/cuisine/local_specialty.md",
+        "description": "Focuses on specific, traditional local dishes as well as key regional ingredients."
+      },
+      {
+        "path": "[city]/history/overview.md",
+        "description": "A comprehensive summary of the city's entire history."
+      },
+      {
+        "path": "[city]/history/early_history.md",
+        "description": "Covers the ancient and early history of the city, from its indigenous origins through various external influences."
+      },
+      {
+        "path": "[city]/history/special_events.md",
+        "description": "Provides information about significant historical events that have shaped the city, such as major earthquakes."
+      },
+      {
+        "path": "[city]/history/french_occupation.md",
+        "description": "Details a period under the french protectorate in the 20th century and its impact on the city's development."
+      },
+      {
+        "path": "[city]/history/pre_occupation.md",
+        "description": "Discusses the history of the city in the centuries before foreign occupation."
+      },
+      {
+        "path": "[city]/history/today.md",
+        "description": "Describes the modern city, focusing on its development and current status as a tourist destination."
+      },
+      {
+        "path": "[city]/leisure/overview.md",
+        "description": "A general summary of leisure activities, attractions, and entertainment options."
+      },
+      {
+        "path": "[city]/leisure/activities_and_experiences.md",
+        "description": "Details specific activities available for tourists."
+      },
+      {
+        "path": "[city]/leisure/gardens_and_parks.md",
+        "description": "Information on public parks and green spaces, such as botanical gardens and city parks."
+      },
+      {
+        "path": "[city]/leisure/historical_sites.md",
+        "description": "Provides information on key historical landmarks in the city."
+      },
+      {
+        "path": "[city]/leisure/museums.md",
+        "description": "Lists and describes the city's museums."
+      },
+      {
+        "path": "[city]/leisure/nightlife_and_entertainment.md",
+        "description": "A guide to the city's nightlife, including bars, beach clubs, and entertainment venues."
+      },
+      {
+        "path": "[city]/leisure/popular_neighborhoods.md",
+        "description": "Describes the main areas of interest for visitors."
+      },
+      {
+        "path": "[city]/leisure/shopping_and_souks.md",
+        "description": "A guide to shopping, with a strong focus on large traditional markets (souks). Details what to buy, from spices to traditional crafts."
+      },
+      {
+        "path": "[city]/safety/overview.md",
+        "description": "Offers a general overview of safety and security for tourists in the city."
+      },
+      {
+        "path": "[city]/safety/emergency_services.md",
+        "description": "Provides crucial contact numbers for local emergency services, including police, gendarmerie, and ambulance/firefighters."
+      },
+      {
+        "path": "[city]/safety/hospitals.md",
+        "description": "Lists key hospitals, private clinics, and 24-hour pharmacies for travelers needing medical assistance."
+      },
+      {
+        "path": "[city]/transportation/overview.md",
+        "description": "A high-level summary of how to get around the city using various modes of transport."
+      },
+      {
+        "path": "[city]/transportation/bus.md",
+        "description": "Details the local public bus system. Includes information on main routes, fares, and how to use the service."
+      },
+      {
+        "path": "[city]/transportation/car_rental.md",
+        "description": "Provides advice on renting a car, including information on local and international rental agencies, required documents, and tips for driving in the region."
+      },
+      {
+        "path": "[city]/transportation/intercity.md",
+        "description": "Explains how to travel to other cities using intercity bus services or the long-distance taxi system or trains."
+      },
+      {
+        "path": "[city]/transportation/taxi.md",
+        "description": "Explains the two types of taxis: smaller taxis for inner-city trips and larger ones for intercity travel. Includes fare information and tips."
+      },
+      {
+        "path": "[city]/transportation/tramway.md",
+        "description": "Explains the local tramway system if it exists, including routes, fares, and tips for using the service."
+      },
+      {
+        "path": "[city]/transportation/airport.md",
+        "description": "Explains the local airport's facilities, services, and transportation options to and from the city."
+      }
+    ]
+  },
+  "country": {
+    "name": "morocco",
+    "files": [
+      {
+        "path": "morocco/architecture.md",
+        "description": "Describes the key elements of Moroccan architecture, including riads, kasbahs, mosques, and madrasas, detailing features like zellij tilework, carved stucco, and intricate woodwork."
+      },
+      {
+        "path": "morocco/communication_and_internet.md",
+        "description": "Provides information on using mobile phones and accessing the internet in Morocco, covering local SIM cards, mobile operators, Wi-Fi availability."
+      },
+      {
+        "path": "morocco/concerts.md",
+        "description": "Information on major music festivals and concert venues in Morocco."
+      },
+      {
+        "path": "morocco/currency_and_money.md",
+        "description": "Explains the local currency, the Moroccan Dirham (MAD), including information on exchange rates, using ATMs, credit card acceptance, and tipping customs."
+      },
+      {
+        "path": "morocco/customs.md",
+        "description": "Details Moroccan customs regulations for travelers, covering duty-free allowances, prohibited items, and regulations on importing or exporting currency and goods."
+      },
+      {
+        "path": "morocco/emergency.md",
+        "description": "A master list of nationwide emergency contact numbers in Morocco."
+      },
+      {
+        "path": "morocco/etiquette.md",
+        "description": "A guide to local customs and social etiquette, covering greetings, dress code, dining manners, photography etiquette, and behavior during Ramadan."
+      },
+      {
+        "path": "morocco/geography.md",
+        "description": "An overview of Morocco's diverse geography, from the Atlas Mountains and Rif Mountains to the Sahara Desert and the Atlantic and Mediterranean coastlines."
+      },
+      {
+        "path": "morocco/health_and_safety.md",
+        "description": "General health and safety advice for traveling in Morocco, including food and water safety, recommended vaccinations."
+      },
+      {
+        "path": "morocco/history.md",
+        "description": "A comprehensive overview of the history of Morocco as a nation, from ancient Amazigh kingdoms and Roman rule to the Alaouite dynasty and modern independence."
+      },
+      {
+        "path": "morocco/how_to_say.md",
+        "description": "A practical list of essential phrases and greetings in Moroccan Arabic (Darija) and Berber (Tamazight) to help travelers with basic communication."
+      },
+      {
+        "path": "morocco/inter_city_transportation.md",
+        "description": "Explains how to travel between major Moroccan cities, covering the national train network (ONCF), long-distance bus companies (CTM, Supratours), and the grand taxi system."
+      },
+      {
+        "path": "morocco/language_guide.md",
+        "description": "Provides an overview of the languages spoken in Morocco."
+      },
+      {
+        "path": "morocco/literature.md",
+        "description": "Introduces notable Moroccan literary works characteristics."
+      },
+      {
+        "path": "morocco/cuisine.md",
+        "description": "A detailed overview of Moroccan national cuisine, its history, key spices (like ras el hanout), and famous dishes like Tagine, Couscous, Pastilla, and Harira soup."
+      },
+      {
+        "path": "morocco/music.md",
+        "description": "Explores the diverse musical traditions of Morocco."
+      },
+      {
+        "path": "morocco/national_anthem.md",
+        "description": "Provides the lyrics and a brief history of the Cherifian Anthem, the national anthem of Morocco."
+      },
+      {
+        "path": "morocco/political_system.md",
+        "description": "An explanation of Morocco's political system as a constitutional monarchy, outlining the roles of the King, the parliament, and the government."
+      },
+      {
+        "path": "morocco/sports.md",
+        "description": "Discusses sport events organised in Morocco."
+      },
+      {
+        "path": "morocco/visa_and_entry_requirements.md",
+        "description": "Details visa policies and entry requirements for tourists traveling to Morocco, including information for different nationalities, passport validity rules, and visa-exempt countries."
+      }
+    ]
+  }
+}

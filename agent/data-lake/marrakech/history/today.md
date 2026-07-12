@@ -1,0 +1,5 @@
+### Marrakech Today
+
+Since gaining independence in 1956, Marrakech has restored its role as a top city. The city went through changes and advancements. It has continued to be a significant cultural hub, drawing in artists, authors, and musicians from all over the globe. In the 1960s and 1970s, Marrakesh became a refuge for those challenging mainstream culture, including famous names like Yves Saint Laurent and the Rolling Stones, who were attracted by the city's unique charm and laid-back vibe.
+
+In 1985, its old medina was recognized as a UNESCO World Heritage site, highlighting its great cultural and historical importance. Nowadays, Marrakech is a famous tourist spot, known for its special mix of past and present energy. It plays a crucial role in tourism, arts, and cultural activities in Morocco, drawing millions of guests who want to discover its ancient markets, palaces, and gardens, while enjoying its lively and distinctive atmosphere.

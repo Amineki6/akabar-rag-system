@@ -1,0 +1,3 @@
+### The 20th Century and French Protectorate
+
+In the late 19th and early 20th centuries, Marrakech became the power base for influential southern feudal lords. During the French Protectorate (1912-1956), the city was effectively governed by the powerful Glaoui family, most notably **Thami El Glaoui**, the Pasha of Marrakech. He collaborated with the French and hosted many international dignitaries, including Winston Churchill. During this era, the "new city" (**Gueliz**) was built outside the ancient ramparts, creating a modern, European-style district with wide avenues and new infrastructure.

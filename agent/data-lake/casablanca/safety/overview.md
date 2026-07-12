@@ -1,0 +1,3 @@
+### Overview of Casablanca's Emergency & Medical Services
+
+These documents provide essential safety and medical information for Casablanca. The files list key emergency contact numbers, including 190 for the Police, 150 for both Ambulance and Fire Department services, and 177 for the Royal Gendarmerie, which operates outside of major cities. Additionally, a number of hospitals in the Casablanca area are identified, including Ibn Rochd, 20 Aout 1953, and My Youssef.

@@ -1,0 +1,3 @@
+### Overview of Tangier's Emergency & Medical Services
+
+These documents provide essential safety and medical information for Tangier. One file lists important emergency contact numbers, including 190 for the Police, 150 for both Ambulance and Fire Department services, and 177 for the Royal Gendarmerie, which serves areas outside of major cities. The other document identifies several local medical facilities in the Tangier area, including the Mohamed V, Al Kortobi, and Duc De Tovar regional hospitals, as well as the Arrazi regional psychiatric hospital.

@@ -1,0 +1,7 @@
+### Overview of Transportation in Tangier
+
+The provided documents describe the transportation network in Tangier, which is served by the Tangier Ibn Battouta Airport (TNG), located 12 km from the city center. Ground transport from the airport is primarily handled by Grand Taxis, which have fixed fares to the city.
+
+For local travel, the city has an extensive and affordable public bus network operated by ALSA, with a single journey typically costing around 5 MAD. Key tourist bus routes include the AE bus to the airport and the LI3 bus to the Tanger Med port. Taxis are also widely available and are divided into two types: light blue 'Petit Taxis' for metered trips within the city, and larger 'Grand Taxis' for longer, negotiated-fare journeys to places like the airport or other towns. The documents explicitly state that Tangier does not have a tramway system.
+
+For travel to other Moroccan cities, the main intercity bus terminal (Gare Routière) is located on the outskirts of the city, though some companies like CTM have their own separate stations. Renting a car is a popular option for exploring the surrounding region, with agencies available at the airport and in the city; however, driving in Tangier can be challenging due to heavy traffic and narrow streets.

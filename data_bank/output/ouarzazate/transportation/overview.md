@@ -1,0 +1,7 @@
+### Overview of Transportation in Ouarzazate
+
+The provided documents describe the transportation network serving Ouarzazate, with the Ouarzazate Airport (OZZ) being the primary air gateway, located approximately 2 km from the city center. Ground transport from the airport to the city is a quick 10-minute journey via Petit Taxis or pre-booked transfers.
+
+For local travel, taxis are a very common and practical option. They are divided into 'Petit Taxis' for trips within the city and larger 'Grand Taxis' for longer-distance excursions to nearby sites like Aït Benhaddou. While a local bus service exists, it is not recommended for tourists as it does not directly serve the main attractions and can be difficult to navigate. The documents explicitly state that there are no tramways in Ouarzazate.
+
+Renting a car is highly recommended as it provides the most flexibility for exploring the region's kasbahs and film studios at your own pace. Driving is on the right side of the road and is relatively straightforward compared to larger Moroccan cities. For travel to other destinations in Morocco, the city's main bus station (Gare Routière) is the central hub, with reliable companies like CTM and Supratours offering services to cities like Marrakech. It is important to note that Ouarzazate has no train station or rail service.

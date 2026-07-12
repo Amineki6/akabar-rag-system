@@ -1,0 +1,3 @@
+### Agadir Today
+
+From the ruins of the 1960 earthquake, Agadir has risen to become a major Moroccan city with a population of over half a million. It is a vital center for tourism, known for its beach stretching over 10 km and a climate that offers 340 days of sunshine a year. It is also the most important fishing port in the country and a key hub for the export of citrus fruits and vegetables from the fertile Souss Valley.

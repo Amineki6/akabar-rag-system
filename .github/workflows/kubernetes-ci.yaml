@@ -1,0 +1,92 @@
+name: Kubernetes Build & Deploy
+
+on:
+  push:
+    branches:
+      - feature/kubernetes-migration
+    paths:
+      - '.github/workflows/kubernetes-ci.yaml'
+      - 'web/**'
+      - 'bff/**'
+      - 'agent/**'
+      - 'utils-services/follow-up-agent/**'
+      - 'k8s/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build-push:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - service: web
+            context_path: web
+          - service: bff
+            context_path: bff
+          - service: agent
+            context_path: agent
+          - service: follow-up-agent
+            context_path: utils-services/follow-up-agent
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Check for changes
+      uses: dorny/paths-filter@v2
+      id: filter
+      with:
+        base: ${{ github.ref_name }}
+        filters: |
+          # We define a filter named 'changed'
+          # It returns 'true' if the service folder OR k8s config changed
+          changed:
+            - '${{ matrix.context_path }}/**'
+
+    - name: Login to Docker Hub
+      if: steps.filter.outputs.changed == 'true'
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    - name: Set Short SHA
+      if: steps.filter.outputs.changed == 'true'
+      id: vars
+      run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+
+    - name: Build and push Docker image
+      if: steps.filter.outputs.changed == 'true'
+      uses: docker/build-push-action@v4
+      with:
+        context: ./${{ matrix.context_path }}
+        push: true
+        tags: |
+          ${{ secrets.DOCKER_USERNAME }}/akabar-${{ matrix.service }}:latest
+          ${{ secrets.DOCKER_USERNAME }}/akabar-${{ matrix.service }}:sha-${{ steps.vars.outputs.sha_short }}
+
+    - name: Update Kubernetes Manifest
+      if: steps.filter.outputs.changed == 'true'
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        
+        for i in {1..5}; do
+          git pull origin feature/kubernetes-migration --rebase --autostash
+          
+          # Only update if we actually built a new image
+          sed -i "s|image: ${{ secrets.DOCKER_USERNAME }}/akabar-${{ matrix.service }}:.*|image: ${{ secrets.DOCKER_USERNAME }}/akabar-${{ matrix.service }}:sha-${{ steps.vars.outputs.sha_short }}|g" k8s/*.yaml
+          
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          
+          git add k8s/*.yaml
+          git commit -m "ci(${{ matrix.service }}): update image tag to sha-${{ steps.vars.outputs.sha_short }}"
+          git push origin feature/kubernetes-migration && break || sleep 5;
+        done

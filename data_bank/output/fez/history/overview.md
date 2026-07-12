@@ -1,0 +1,3 @@
+### Overview of fez's History
+
+Founded in the 9th century, Fez reached its height in the 13th–14th centuries under the Marinids, when it replaced Marrakesh as the capital of the kingdom. The urban fabric and the principal monuments in the medina – madrasas, fondouks, palaces, residences, mosques and fountains - date from this period. Although the political capital of Morocco was transferred to Rabat in 1912, Fez has retained its status as the country's cultural and spiritual centre.

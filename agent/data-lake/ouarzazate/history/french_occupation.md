@@ -1,0 +1,3 @@
+### The French Protectorate
+
+During the French Protectorate (1912-1956), the French army established a garrison and administrative center in Ouarzazate in 1928. They were attracted to its strategic location, which served as a base to supervise the surrounding Draa, Dades and Ziz valleys. The French built a new, modern city alongside the traditional kasbahs, laying the foundation for the future development of the city. The French faced fierce resistance from local tribes.

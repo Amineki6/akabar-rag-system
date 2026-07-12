@@ -1,0 +1,5 @@
+### Overview of Accommodation Types in Agadir
+
+The document describes the various types of accommodation available in Agadir to suit different travel styles and budgets. The most common options are resorts and hotels, particularly along the beachfront, which often provide all-inclusive packages ideal for families and those seeking a relaxing vacation. For travelers desiring more independence, there are apartment hotels (aparthotels) with kitchenettes, as well as private apartments and villas for rent.
+
+Budget-friendly options include hostels, which offer a social environment for backpackers, and guesthouses (or riads), which provide a more intimate and authentic local experience. Finally, for those interested in water sports, the areas of Taghazout and Anza feature surf camps that offer packages including accommodation, meals, and surf lessons.
