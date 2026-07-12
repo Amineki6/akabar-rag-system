@@ -1,0 +1,11 @@
+Chefchaouen's cuisine is a testament to its mountainous setting and rich history, blending traditional Moroccan flavors with unique local specialties from the Rif region. The food here is often hearty, fresh, and highlights local, organic ingredients.
+
+Here are some of the local food specialties you must try in Chefchaouen:
+
+* **Jben (Goat Cheese):** This is arguably the most famous local specialty. The Rif Mountains are known for their fresh goat's milk, and the creamy, soft goat cheese called *Jben* is a staple. It's often served for breakfast, drizzled with honey, or as part of a fresh salad. You can find it at local markets and many restaurants.
+* **Bissara:** A thick, flavorful soup made from fava beans, this is a beloved staple of Moroccan breakfast, especially in the north. It's served hot and is often topped with a drizzle of olive oil, cumin, and a sprinkle of paprika. You can find it at local eateries and street food stalls.
+* **Tajine:** While a national dish, the tajines in Chefchaouen have a distinct, rustic flavor. Many local restaurants use fresh vegetables and meat from the surrounding farms. Look for the unique **Tajine al-Rifia**, a traditional version that often includes wild herbs and a rich, slow-cooked sauce.
+* **Harira:** A classic Moroccan soup, Harira is a lentil-and-chickpea soup often seasoned with tomatoes, coriander, and other spices. It's especially popular during the month of Ramadan but is served year-round in many restaurants as a starter.
+* **Mint Tea:** Known as "Berber Whiskey," mint tea is a symbol of Moroccan hospitality and a central part of daily life. The tea in Chefchaouen, often made with locally grown mint, is especially fresh and fragrant. It’s served everywhere, from cafes on the main square to small guesthouses.
+* **Bread (Khobz):** The bread in Chefchaouen is typically baked in communal ovens. The hot, round loaves of rustic bread, known as *Khobz*, are a key part of every meal. They are perfect for scooping up sauces from a tajine or a bowl of soup.
+* **Olive Oil:** The region is home to vast olive groves, and the locally produced olive oil is of excellent quality. You'll find it generously used in cooking and often served as a condiment with bread.

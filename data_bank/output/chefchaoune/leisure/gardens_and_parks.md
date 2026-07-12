@@ -1,0 +1,9 @@
+While Chefchaouen is most famous for its blue streets and medina, it also offers some lovely green spaces and natural attractions. Here are some of the key gardens and parks to explore:
+
+### Gardens within the City
+* **Kasbah Garden:** Located within the Kasbah, a fortified palace in the heart of the medina, this beautiful Andalusian-style garden is a peaceful oasis. It features fountains, benches, and a small playground for children. The Kasbah itself also houses an ethnographic museum, and the tower offers panoramic views of the city.
+* **Plaza Uta el-Hammam:** While not a traditional garden, this central square is a vibrant, shady, and cobbled space lined with cafes and restaurants. It's an ideal spot to relax, people-watch, and admire the majestic Rif Mountains that surround the city.
+* **Ras El Maa Waterfall:** Found just outside the medina's northeastern gate, this is the point where water from the mountains flows into the city. It's a popular gathering place for locals and a refreshing spot to sit and enjoy the sound of the water. 
+### Parks and Natural Areas near Chefchaouen
+* **Talassemtane National Park:** For those who enjoy hiking and nature, this is a major attraction near Chefchaouen. The park is known for its spectacular landscapes, waterfalls, and diverse flora and fauna. Popular hikes within the park include the trails to the **Akchour Waterfalls** and **God's Bridge**.
+* **Bouhachem Regional Nature Reserve:** Another beautiful natural site in the Rif Mountains, this reserve is a stunning and well-preserved area with diverse species of oak and other plants. It is a great spot for hiking and exploring the natural beauty of the region.

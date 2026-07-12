@@ -1,0 +1,5 @@
+### Founding and Almoravid Era
+
+Marrakesh, Often Retired to As the “Red City” due to its distinctive red Sandstone Buildings, is one of the most iconic cities in Morocco. Situated at the Foothills of the Majestic Atlas Mountains, Marrakesh has been a cultural, religious, and commercial hub in north Africa for almost a millennium. 
+
+Marrakech was founded in 1070  by **Abu Bakr ibn Umar**, a chieftain of the Almoravid dynasty, a amazigh empire that emerged from the Sahara. His cousin and successor, **Yusuf ibn Tashfin**, is widely credited as the city's primary builder. Under his rule, Marrakech became the capital of the Almoravid Empire, which stretched from Spain to Senegal. The Almoravids established the city's foundational infrastructure, including its extensive underground irrigation channels known as 'khettaras', which transformed the arid plain into a fertile oasis, and built the first version of the city walls.

@@ -1,0 +1,7 @@
+### Overview of Ouarzazate's History
+
+The provided documents trace the history of Ouarzazate from its origins as a strategic point on the trans-Saharan trade routes rather than a formal city. The area was characterized by fortified villages and kasbahs, with the Taourirt Kasbah, whose oldest parts date to the 17th century, being the most significant structure and the historical heart of the area.
+
+In the late 19th and early 20th centuries, the region came under the control of the powerful Glaoui clan, who expanded the Taourirt Kasbah into a grand residence and used it as a base to control trade. The city's modern layout began to form in 1928 during the French Protectorate, when the French military established a garrison and built a new administrative town next to the old kasbahs.
+
+Ouarzazate's contemporary identity was shaped by the film industry starting in the 1960s with movies like *Lawrence of Arabia*. This led to the creation of major film studios, including Atlas Studios in 1983, and earned the city the nickname "Ouallywood". Today, Ouarzazate is a thriving tourist hub known as the "Gateway to the Desert," blending its historical role with its modern identity as a cinematic capital and a center for solar power innovation.

@@ -1,0 +1,2123 @@
+:root {
+    /* Fonts */
+    --primary-font: "Figtree", sans-serif;
+
+    /* Colors */
+    --background-color: #FAF9F5;
+    --heading-color: #160211;
+    --text-color-primary: #160211;
+    --text-color-secondary: #57534D;
+    --input-placeholder-color: #A5A09C;
+    --background-shade-dark: #f5f2f2;
+    --chip-bg-color: #FFFFFF;
+    --input-bg-color: #FFFFFF;
+    --cta-color: #E67E22;
+    --cta-color-hover: #D35400;
+
+    /* Sizing & Spacing */
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-xxxl: 64px;
+
+    /* Borders */
+    --base-border-radius: 8px;
+
+    --n-spacing: 0.25rem; /* 4px */
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Base & Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+    font-family: var(--primary-font);
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--heading-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    overflow: hidden;
+}
+
+body.dark-mode {
+    --background-color: #17181b;
+    --heading-color: #EAEAEA;
+    --text-color-primary: #E0E0E0;
+    --text-color-secondary: #B0B0B0;
+    --input-placeholder-color: #757575;
+    --background-shade-dark: #2A2A2A;
+    --chip-bg-color: #1E1E1E;
+    --input-bg-color: #222222;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes .header-left and .header-right apart */
+    background-color: var(--background-color);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    position: fixed;
+    height: 64px;
+}
+
+/* This container holds the right-side buttons */
+.header-right {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+
+#new-convo-btn {
+    display: none;
+}
+
+/*
+ * UTILITY CLASS TO SHOW THE BUTTON
+ * We will add this class using JavaScript.
+ */
+#new-convo-btn.visible {
+    display: inline-flex; /* Use inline-flex or block to make it appear */
+    margin: 0 5px 0 16px;
+}
+
+
+.chat-ui {
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Horizontally centers everything */
+    justify-content: center; /* Vertically centers the initial content */
+    padding: 12px 8px;
+    direction: ltr;
+}
+
+.orb-container {
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-grow: 1;
+    display: flex;
+    z-index: 100;
+
+    /* 1. THE ANIMATED BACKGROUND */
+    background: linear-gradient(120deg, #fecb54, #ff8c00, #f75a2b, #ff9e49, #ffc94b);
+    background-size: 200% 200%;
+    box-shadow: 0 0 30px rgba(255, 165, 0, 0.6);
+
+    /* Link BOTH animations in a single, comma-separated line */
+    animation: 
+        sweep-animation 3s ease-in-out infinite, 
+        pulse-animation 4s ease-in-out infinite;
+
+}
+
+/* 2. THE TEXTURE OVERLAY (no changes needed here) */
+.orb-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"><rect width="10" height="10" fill="transparent"/><path d="M0,0L10,10M10,0L0,10" stroke="rgba(0,0,0,0.1)" stroke-width="1"/></svg>');
+  background-size: 5px 5px;
+  opacity: 0.3; 
+  mix-blend-mode: overlay;
+}
+
+/* 3. THE ANIMATION KEYFRAMES (no changes needed here) */
+@keyframes sweep-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes pulse-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.logo-written img{
+    height: 100%;
+    width: auto;
+    margin-right: 8px;
+    max-height: 32px;
+}
+
+.logo-written {
+    display: flex;
+    align-items: center;
+}
+
+
+#theme-toggle-btn {
+    padding: 0px 8px 0px 8px;
+    border: none;
+}
+
+.chat-input-container {
+    width: 100%; max-width: 720px; display: flex;
+    flex-direction: column; 
+    justify-content: center; align-items: center;
+    gap: 30px;
+    flex-grow: 0;
+    margin-top: 35px;
+}
+
+
+/* Input Form */
+.input-form {
+    width: 100%; max-width: 720px; display: flex;
+    flex-direction: column; background: var(--input-bg-color);
+    border-radius: var(--base-border-radius);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.15);
+    padding: 12px 16px;
+    border: 1px solid rgba(31, 30, 29, 0.15);
+    flex-grow: 0;
+    min-height: 121px;
+    
+}
+.input-row { 
+    display: flex; align-items: center; width: 100%; 
+    margin-bottom: 20px;
+}
+
+body.chat-active .input-row {
+    margin-bottom: 10px;
+}
+
+
+body.chat-active .input-form {
+    width: calc(100% - 2rem);  max-width: 800px; display: flex;
+    flex-direction: column; background: var(--input-bg-color);
+    border-radius: var(--base-border-radius);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.15);
+    padding: 12px 16px;
+    border: 1px solid rgba(31, 30, 29, 0.15);
+    flex-grow: 0;
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    min-height: 80px;
+}
+
+hr { 
+    border: none; 
+    height: 1px; 
+    background-color: #EBEAE9; 
+    margin: var(--spacing-sm) 0; 
+}
+
+.dark-mode hr {
+    background-color: #2f2f2f; 
+}
+
+
+.input-form input[type="text"] {
+    flex-grow: 1; border: none; outline: none; background: transparent;
+    color: var(--text-color-primary); font-family: var(--primary-font);
+    font-size: 1rem; font-weight: 400; line-height: normal;
+    padding: 8px 2px;
+}
+.input-form input::placeholder { color: var(--input-placeholder-color); opacity: 1; }
+
+.send-btn {
+    background: var(--heading-color); border: none; cursor: pointer;
+    border-radius: 8px; display: grid;
+    place-items: center; 
+    transition: background-color 0.3s ease;
+}
+.input-divider { border: none; height: 1px; background-color: #EBEAE9; margin: var(--spacing-sm) 0; }
+
+/* Actions Row */
+.actions-row {
+    display: flex; justify-content: space-between;
+    align-items: center; width: 100%; gap: var(--spacing-sm);
+    direction: ltr;
+}
+
+.action-btn {
+    background: transparent; border: none; cursor: pointer;
+    border-radius: 8px; display: grid;
+    place-items: center; 
+    transition: background-color 0.3s ease;
+}
+
+.copy-response-icon-mask {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background-color: rgb(0, 0, 0); /* Default color */
+    
+    /* Use the SVG as a mask */
+    mask-image: var(--icon-url);
+    -webkit-mask-image: var(--icon-url); /* For Safari compatibility */
+    
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    
+}
+
+.dark-mode .copy-response-icon-mask{
+    background-color: #ffffff;
+}
+
+/* Suggestions: Desktop Buttons & Mobile Dropdown */
+.suggestions-container {
+  /* Keep this to enable scrolling */
+  overflow-x: auto;
+
+  /* --- Add these lines to hide the scrollbar --- */
+
+  /* For Firefox */
+  scrollbar-width: none;
+  
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+}
+
+/* For Chrome, Safari, and other WebKit browsers */
+.suggestions-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.actions-right {
+    display: flex; align-items: center; gap: var(--spacing-sm);
+    height: 30px;
+}
+
+
+.suggestion-buttons-desktop { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 8px; 
+    padding-top: 24px;
+
+}
+
+body.chat-active .suggestion-buttons-desktop  { 
+    display: none; 
+}
+
+
+.logo {
+    display: flex; align-items: center; gap: var(--spacing-xxs);
+    background: transparent; border: 1px solid transparent; cursor: pointer;
+    font-family: var(--primary-font); font-size: 0.9rem; font-weight: 400;
+    color: white; height: 32px; padding: 0px 8px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border: none;
+    text-decoration: none;
+    margin: 8px;
+    background: black;
+}
+
+.dark-mode .logo {
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+}
+
+.icon-button-about {
+    display: flex; align-items: center; gap: var(--spacing-xxs);
+    font-family: var(--primary-font); font-size: 0.9rem; font-weight: 400;
+    color: black; height: 32px; padding: 0px 8px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    margin: 8px 8px 8px 0px;
+}
+
+.dark-mode .icon-button-about {
+    color: white;
+    background: transparent;
+}
+
+/* General Button Styles */
+.icon-button {
+    display: flex; align-items: center; gap: var(--spacing-xxs);
+    background: transparent; border: 1px solid transparent; cursor: pointer;
+    font-family: var(--primary-font); font-size: 14px; font-weight: 500;
+    color: var(--text-color-secondary); height: 32px; padding: 0px 5px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.icon-button.input {
+    display: flex; align-items: center; gap: 5px;
+    background: var(--background-color); border: 1px solid transparent; cursor: pointer;
+    font-family: var(--primary-font); font-size: 14px; font-weight: 500;
+    color: rgb(61, 61, 58); padding: 8px 12px; height: 37px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap;
+    border: rgba(31, 30, 29, 0.15) 0.5px solid;
+}
+
+.send-icon-mask {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: white; /* Default color */
+  
+  /* Use the SVG as a mask */
+  mask-image: var(--icon-url);
+  -webkit-mask-image: var(--icon-url); /* For Safari compatibility */
+  
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dark-mode .send-icon-mask{
+    background-color: var(--background-color);
+}
+
+.icon-mask {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(61, 61, 58); /* Default color */
+  
+  /* Use the SVG as a mask */
+  mask-image: var(--icon-url);
+  -webkit-mask-image: var(--icon-url); /* For Safari compatibility */
+  
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dark-mode .icon-button.input {
+    background-color: var(--background-color);
+    color: #727272;
+    border: rgba(255, 255, 255, 0.15) 0.5px solid;
+}
+.dark-mode .icon-mask{
+    background-color: #727272;
+}
+
+.actions-left {
+    display: flex; align-items: center; gap: 8px;
+    height: 30px;
+}
+
+.send-btn-new {
+    background: transparent; border: none; cursor: pointer;
+    border-radius: 8px; display: flex;
+    align-items: center; justify-content: center;
+    transition: background-color 0.3s ease;
+    border: 1px solid #e0e6ed;
+    height: 40px;
+    padding: 12px 8px;
+    font-size: 14px;
+}
+
+.icon-button img { width: 20px; height: 20px; }
+
+.header-button-text {
+    color: black;
+}
+
+.dark-mode .header-button-text {
+    color: white;
+}
+.cta-button {
+    background-color: var(--cta-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--primary-font);
+    height: 44px;
+    padding: 0 var(--spacing-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* --- Chat Log & Messages --- */
+/* Find this rule */
+.chat-log {
+    display: none; /* Keep it hidden initially */
+    width: 100%;
+    max-width: 800px;
+    
+    /* These are essential for the active chat layout */
+    flex-grow: 1;
+    /* Recommended for better behavior with scrollIntoView */
+    position: relative; 
+}
+
+.chat-turn {
+    min-height: 628px;
+}
+
+.chat-turn.chat-turn-finalized {
+    min-height: unset; /* or 'auto' or '0' depending on what works best */
+}
+
+.header-spacer {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.user-message {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+.user-query-pill {
+    background-color: var(--background-shade-dark);
+    color: #000000;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 20px;
+    max-width: 80%;
+    text-align: left;
+    word-wrap: break-word;
+    scroll-margin-top: 80px; 
+}
+
+.dark-mode .user-query-pill {
+    background-color: var(--background-shade-dark);
+    color: #ffffff;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: 20px;
+    max-width: 80%;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+
+.map-container {
+    width: 100%;
+    margin-top: 12px;
+    border-radius: 8px;
+    z-index: 0; /* Important for some mapping libraries */
+}
+
+.model-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Good practice to include */
+  overflow-wrap: break-word;
+}
+
+.model-response {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    text-align: left;
+    overflow-wrap: break-word;
+    flex-direction: column;
+}
+
+/* This centers the loader next to the logo */
+.model-response.loading {
+    display: flex;
+    align-items: center; 
+    gap: 8px; /* Adds space between logo and loader */
+    flex-direction: row;
+}
+
+
+/* This is the spinning circle animation */
+.loader {
+    border: 4px solid rgba(128, 128, 128, 0.2); /* Light grey circle */
+    border-top: 4px solid #888; /* Darker grey for the spinning part */
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.response-text {
+    padding: 0px 8px;
+    border-radius: 20px;
+    color: var(--text-color-primary);
+    line-height: 28px; 
+    word-wrap: break-word;
+    box-sizing: border-box; 
+    letter-spacing: 0;
+    
+    /* 2. Allows the element to shrink inside a flex container */
+    min-width: 0; 
+}
+
+.response-text h3 {
+    margin-top: 1em; /* This creates the equivalent of two line breaks */
+    margin-bottom: 0.2em;
+}
+
+/* If it's the first h3, you might not want the top margin */
+.response-text h3:first-child {
+    margin-top: 0;
+}
+
+.response-text li:has(ul) {
+  margin-top: 0.2em !important; 
+}
+
+.response-text li {
+  /* This is the key property to add space BETWEEN list items */
+  margin-top: 0.2rem !important; 
+}
+
+
+
+.response-text ul:first-child {
+  /* This is the key property to add space BETWEEN list items */
+  margin-top: 0.7em; 
+}
+
+p {
+    margin-bottom: 0.7em; /* Adds space after each paragraph */
+    line-height: 26px; /* Improves readability */
+}
+
+.response-text:has(+ .audio-player-wrapper) p {
+    margin-bottom: 10;
+}
+
+/* New wrapper for the response text and action buttons */
+.response-main {
+  display: flex;
+  flex-direction: column;
+  
+  width: 100%;
+  
+  /* --- ADD THESE TWO LINES --- */
+  flex: 1;          /* Allows the element to grow and shrink */
+  min-width: 0;     /* Allows the element to shrink below its content size */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+/* Container for the copy and report buttons */
+.response-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Optional: Add some nice hover effects for the action buttons */
+.response-actions .icon-button {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+    padding: 5px;
+    width: 70px;
+    display: block;
+    text-align: center;
+    height: 35px;
+}
+
+.response-actions-left{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 8px;
+    color: #000000;
+    font-size: 14px;
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 2px 6px;
+
+}
+
+.weather-info {
+    /* This is set to 'flex' by your JavaScript to become visible */
+    align-items: center;    /* Vertically aligns the icon and text */
+    gap: 0.5em;             /* Adds space between the icon, temp, and city */
+    
+    /* This is the magic part: it takes up all available space,
+       pushing the other items (copy/report buttons) to the far right. */
+    margin-right: 8px; /* Space between weather info and report button */
+    
+    color: #000000;            /* A nice dark gray for the text */
+    font-size: 0.85rem;     /* Makes the text slightly smaller than the main response */
+}
+
+.dark-mode .weather-info {
+    color: #ffffff;            /* Lighter gray for dark mode */
+}
+.weather-info .weather-icon {
+    height: 24px;           /* Controls the icon size */
+    width: 24px;
+}
+
+
+.weather-info .weather-temp {
+    font-weight: 600;       /* Makes the temperature text bold */
+}
+
+/* This is necessary for positioning the tooltip relative to the button */
+.has-tooltip {
+    position: relative;
+}
+
+/* This is the tooltip bubble itself */
+.has-tooltip::after {
+    /* Get the tooltip text from the 'data-tooltip' attribute */
+    content: attr(data-tooltip);
+    position: absolute;
+
+    /* Position the tooltip above the button */
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 8px; /* Add some space between the icon and the tooltip */
+
+    /* Style the tooltip's appearance */
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent the text from wrapping */
+
+    /* Hide the tooltip by default */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none; /* Prevents the tooltip from interfering with mouse events */
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Show the tooltip when the button is hovered */
+
+
+
+body.dark-mode .response-orb {
+    box-shadow: 0px 4px 15px rgba(230, 126, 34, 0.4);
+}
+
+
+/* --- Active Chat State --- */
+body.chat-active {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+body.chat-active .orb-container {
+    display: none;
+}
+body.chat-active .chat-log {
+    display: block;
+    padding-top: 100px; 
+}
+body.chat-active .chat-ui {
+    justify-content: flex-start;
+    min-height: auto;  /* Changed from height to min-height */
+    overflow-y: visible; /* Remove overflow from chat-ui */
+    padding-bottom: 100px; /* Remove padding from chat-ui */
+}
+
+.response-logo {
+    width: 40px;
+    height: 40px;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+body.dark-mode.chat-active .input-form {
+    box-shadow: 0px -5px 30px rgba(0, 0, 0, 0.4);
+}
+
+.submit-button {
+        display: block;
+}
+
+
+
+/* Dark Mode */
+
+body.dark-mode .orb-container {
+    box-shadow: 0px 10px 30px rgba(230, 126, 34, 0.4);
+}
+body.dark-mode .input-form {
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.6);
+    border: 1px solid #2f2f2f;
+}
+body.dark-mode .send-btn {
+    background: var(--heading-color);
+}
+body.dark-mode .send-btn svg path {
+    fill: #121212;
+}
+
+body.dark-mode .input-divider {
+    background-color: #2f2f2f;
+}
+body.dark-mode .dropdown-menu {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid #2f2f2f;
+}
+body.dark-mode .icon-button img:not(#theme-icon) {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+.body {
+    scroll-behavior: smooth;
+}
+
+
+
+
+.audio-player-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px; /* Space between the title and player */
+    padding-left: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.audio-title {
+    color: var(--text-color-primary);
+    text-align: center; /* Center the title */
+}
+
+
+/* Main container for positioning */
+.circular-audio-player {
+    display: inline-block;
+    position: relative;
+    width: 30px; /* Changed from 60px */
+    height: 30px; /* Changed from 60px */
+}
+
+/* This holds both the button and the SVG progress ring */
+.circular-controls {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* Make the container and its children (the SVG) ignore clicks by default */
+    pointer-events: none;
+}
+
+/* The SVG element that contains the progress circles */
+.progress-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Base styling for both circles */
+.progress-ring-bg,
+.progress-ring-progress {
+    fill: transparent;
+    stroke-width: 4;
+}
+
+
+/* The colored progress circle that gets revealed */
+.progress-ring-progress {
+    stroke: var(--cta-color); 
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+/* The play/pause button, styled to sit perfectly in the center */
+.circular-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Re-enable clicks ONLY for the button */
+    pointer-events: auto;
+    
+    /* Styling for a clean, modern button */
+    width: 30px;
+    height: 30px;
+    background-color:  #e9e9e8;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;  
+    color: #333;
+    
+    /* Smooth transitions for hover effects */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-play-btn img {
+    width: 16px;
+    height: 16px;
+}
+
+.highlight {
+  background-color: transparent; /* A soft yellow highlight */
+  font-weight: 600;
+}
+
+.spacer-right {
+  display: flex;
+}
+
+
+
+.clickable-suggestion {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: inherit; /* Use the parent text color */
+}
+
+
+
+
+
+
+/* Styling for the text content within the fullscreen view */
+.travel-guide-text {
+  max-width: 800px;
+  text-align: left;
+  line-height: 1.6;
+  color: #160211; /* Changed: Primary Text Color */
+  padding: 20px;
+}
+
+
+
+/* Heading styles */
+.travel-guide-text h1 {
+  font-size: 2.5em;
+  color: #160211; /* Changed: Primary Text Color */
+  text-align: left;
+}
+
+.travel-guide-text h2 {
+  font-size: 2em;
+  color: #160211; /* Changed: Primary Text Color */
+  border-bottom: 2px solid #E67E22; /* Changed: CTA/Accent Color */
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+
+.travel-guide-text h3 {
+  font-size: 1.5em;
+  color: #160211; /* Changed: Primary Text Color */
+  margin-top: 20px;
+}
+
+/* Paragraph and list styles */
+.travel-guide-text p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  /* Color is inherited from .travel-guide-text */
+}
+
+.travel-guide-text ul {
+  list-style-type: none; /* Removes bullet points by default */
+  padding-left: 0;
+}
+
+.travel-guide-text ul li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Custom bullet points for the list */
+.travel-guide-text ul li::before {
+  content: "•";
+  color: #E67E22; /* Changed: CTA/Accent Color */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+#burger-menu-btn.icon-button.hide {
+    display: none; /* Hide the burger menu button */
+}
+#burger-menu-btn.icon-button {
+    display: flex; /* Show the burger menu button */
+}
+
+.response-text ul {
+    padding-left: 16px; 
+}
+
+
+
+.response-text[dir="rtl"] ul {
+    padding-right: 16px; 
+    padding-left: 0px;
+    
+}
+
+html[dir="rtl"] .main-header{
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .header-right {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .icon-button {
+    flex-direction: row-reverse;
+}
+
+/* Main container for positioning */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: var(--primary-font);
+    height: 100%;
+}
+
+/* The main button that shows the selected language and arrow */
+.language-toggle-btn {
+    background-color: var(--background-color);
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+    border: none;
+    font-size: 0.9rem;
+    color: black;
+    margin: 8px 8px 8px 0px;
+}
+
+
+
+
+
+
+
+/* Rotates the arrow when the dropdown is open */
+.language-toggle-btn[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 50%; /* ⬅️ Change this from 0 */
+    transform: translateX(-50%); /* ⬅️ Add this line */
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    min-width: 100%;
+    z-index: 1000;
+    margin-top: 5px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+/* Class to show the menu with JavaScript */
+.language-dropdown .dropdown-menu.show {
+    display: block;
+    
+}
+
+/* Styling for the buttons inside the menu */
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+/* --- Dark Mode Styles --- */
+
+/* Dark mode for the main button */
+.dark-mode .language-toggle-btn {
+    background-color: #17181b; /* Dark grey background */
+    color: #f0f0f0;            /* Light text color */
+}
+
+/*
+   The original CSS for creating the arrow was missing,
+   so this rule handles both its creation and dark mode color.
+
+/* Style for the arrow in dark mode */
+.dark-mode .language-toggle-btn::after {
+    border-top-color: #f0f0f0; /* Light arrow color */
+}
+
+/* Dark mode for the dropdown menu */
+.dark-mode .dropdown-menu {
+    background-color: #2f2f2f; /* Very dark background */
+    border-color: #3a3a3c;     /* Slightly lighter border */
+}
+
+/* Dark mode for the buttons inside the menu */
+.dark-mode .dropdown-menu button {
+    color: #f0f0f0; /* Light text color for menu items */
+}
+
+
+
+
+
+
+html[dir="rtl"] .response-actions {
+  text-align: right;
+}
+
+/* Optional: Adjust spacing for RTL */
+html[dir="rtl"] .response-logo {
+    margin-right: 0;
+}
+
+
+.mapboxgl-popup {
+    padding: 0; /* Remove default padding */
+}
+
+/* The content wrapper inside the popup */
+/* We renamed .map-popup to .map-popup-content in JS for clarity */
+.map-popup-content {
+    border-radius: 8px; /* Rounded corners */
+    font-family: var(--primary-font); /* Modern font */
+    text-align: center;
+    color: #333; /* Darker text */
+    font-weight: 200;
+}
+
+/* Popup tip/arrow */
+.mapboxgl-popup-tip {
+    border-bottom-color: #fff;
+}
+
+.mapboxgl-popup-content {
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Location name styling */
+.map-popup-content strong {
+    display: block;
+    margin-bottom: 10px; /* More space below title */
+    font-size: 1.1rem; /* Slightly larger title */
+    font-weight: 600; /* Bolder */
+    color: #222; /* Even darker title */
+}
+
+/* Directions button styling (as before, but ensure it fits the new popup style) */
+.directions-btn {
+    display: inline-block;
+    padding: 8px 16px; /* Slightly larger button */
+    background-color: var(--cta-color);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-radius: 6px; /* Slightly more rounded button */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+body.chat-active #theme-toggle-btn {
+    display: none;
+}
+
+.conversion-container {
+    display: block; /* Ensures the rate appears on its own line */
+}
+
+.conversion-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f0f4f9;
+    border: 1px solid #e0e6ed;
+    border-radius: 20px;
+    padding: 15px 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.response-text[dir="rtl"] {
+    text-align: right;
+}
+
+
+
+html[dir="rtl"] #chat-input {
+    text-align: right;
+}
+
+html[dir="rtl"] #chat-input {
+    direction: rtl;
+}
+
+#chat-input[dir="ltr"] {
+    text-align: left;
+}
+
+#chat-input[dir="rtl"] {
+    text-align: right;
+}
+
+
+
+.pill-from, .pill-to {
+    color: #333;
+}
+
+.pill-to {
+    font-weight: 600;
+    color: #0056b3;
+}
+
+.pill-equals {
+    color: #888;
+}
+
+/* [ADDED] Styles for the rate text */
+.conversion-rate {
+    font-size: 0.8em;
+    color: #667;
+    padding: 4px 0 0 15px; /* Aligns it nicely under the pill */
+}
+
+#sendMessageButton-top {
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center;     /* Vertically centers */
+    height: 35px;
+    width: 35px;
+}
+
+#copy-last-message {
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center;     /* Vertically centers */
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e0e6ed;
+}
+
+#explore-hidden {
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center;     /* Vertically centers */
+    height: 35px;
+    width: 35px;
+    background-color: var(--cta-color);
+    border: 1px solid var(--cta-color);
+}
+
+.explore-icon-mask {
+    display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(255, 255, 255); /* Default color */
+  
+  /* Use the SVG as a mask */
+  mask-image: var(--icon-url);
+  -webkit-mask-image: var(--icon-url); /* For Safari compatibility */
+  
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  
+  transition: background-color 0.2s ease-in-out;
+}
+
+
+
+.copy-icon-mask {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 0, 0); /* Default color */
+  
+  /* Use the SVG as a mask */
+  mask-image: var(--icon-url);
+  -webkit-mask-image: var(--icon-url); /* For Safari compatibility */
+  
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dark-mode .copy-icon-mask{
+    background-color: #ffffff;
+}
+
+.dark-mode #copy-last-message {
+    background-color: #222222 ;
+    border: 1px solid #727272;
+}
+
+#copy-response-icon {
+    padding: 6px;
+}
+
+
+#report-response-icon {
+    padding: 6px;
+}
+
+.copy-response-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    padding: 6px;
+}
+
+#pick-language-but {
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center;     /* Vertically centers */
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 1px solid #E0E6EC;
+}
+
+.language-icon-mask {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(0, 0, 0); /* Default color */
+  
+  /* Use the SVG as a mask */
+  mask-image: var(--icon-url);
+  -webkit-mask-image: var(--icon-url); /* For Safari compatibility */
+  
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dark-mode .language-icon-mask{
+    background-color: #ffffff;
+}
+
+/* Welcome Pop-up Styles */
+/* --- Overlay (applies to both modes) --- */
+#welcome-overlay {
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.4); /* Added for the dimming effect */
+    z-index: 1000;
+}
+
+/* --- Default Styles (Light Mode) --- */
+#welcome-popup {
+  background: #FAF9F5;      /* Light background */
+  color: #17181b;          /* Dark text */
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 400px;
+}
+
+
+/* --- Dark Mode Override Styles --- */
+/* These rules apply ONLY when a parent has the .dark-mode class */
+.dark-mode #welcome-popup {
+  background: #222222;      /* Dark background */
+  color: #ffffff;          /* Light text */
+}
+
+.dark-mode #welcome-popup{
+  color: #ffffff; /* Light heading for dark mode */
+}
+
+
+
+
+/* Dropdown Styles */
+#language-select-dropdown {
+  width: 100%;
+  padding: 8px;
+  margin-top: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font: var(--primary-font);
+  background-color: white;
+  -webkit-appearance: none; /* Removes default browser styling */
+  -moz-appearance: none;
+  appearance: none;
+  /* Add custom dropdown arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px;
+  padding-right: 40px; /* Make space for arrow */
+}
+
+#language-select-dropdown-button {
+  width: 100%;
+  max-width: 200px;
+  padding: 8px;
+  margin-top: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font: var(--primary-font);
+  background-color: white;
+  -webkit-appearance: none; /* Removes default browser styling */
+  -moz-appearance: none;
+  appearance: none;
+  /* Add custom dropdown arrow */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px;
+  padding-right: 40px; /* Make space for arrow */
+}
+
+
+/* Continue Button Styles */
+#confirm-language-btn {
+  margin-top: 16px;
+  padding: 8px 0px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.welcome-message {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.welcome-submessage {
+    margin-bottom: 8px;
+}
+
+.logo-loader-container {
+    position: relative; /* Establishes a positioning context for the absolute child (.loader) */
+    width: 40px;  /* Set to the width of your logo image */
+    height: 40px; /* Set to the height of your logo image */
+    margin-right: 12px; /* Adds some space between the loader and the "Thinking..." text */
+}
+
+
+.logo-loader-container .response-logo {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-loader-container .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Makes the element a perfect circle */
+    border: 3px solid transparent; /* A faint, transparent border for the track */
+    border-top-color: var(--cta-color); /* The solid, visible part of the spinner */
+    animation: spin 1s linear infinite; /* Applies the spinning animation */
+}
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.model-response.loading span::after {
+    /* The animation property applies our keyframes */
+    animation: ellipsis 1s infinite;
+
+    /* Start the animation with the first dot */
+    content: ".";
+    
+    /* These properties prevent the text from shifting as dots are added/removed */
+    display: inline-block;
+    width: 1.2em; /* Provides enough space for all three dots */
+    text-align: left;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+body.chat-active .input-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--background-color);
+    height: 117px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Active state to show the modal */
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    opacity: 0;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.modal-header .modal-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+body.dark-mode .modal-title {
+    color: #000000;
+}
+
+.send-report-btn {
+    background: var(--heading-color); border: none; cursor: pointer;
+    border-radius: 4px; display: grid;
+    height: 32px;
+    min-width: 62px;
+    padding: 0px 8px;
+    place-items: center; 
+    transition: background-color 0.3s ease;
+    color: white;
+}
+
+body.dark-mode .send-report-btn {
+    background: #000000; color: #ffffff;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #888;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-body label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    resize: vertical;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    margin-bottom: 16px;
+    font-family: var(--primary-font);
+}
+
+/* --- New Styles for Language Selector --- */
+
+.modal-body select {
+    /* --- Basic Layout & Font --- */
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--primary-font); /* Uses your app's primary font */
+    padding: 12px 16px; /* Creates comfortable spacing inside the element */
+    margin-bottom: 24px;
+    box-sizing: border-box;
+
+    /* --- Custom Appearance --- */
+    border: 1px solid #dfe1e5;   /* A softer, more modern border color */
+    border-radius: 8px;          /* Matches modern rounded corners */
+    background-color: #ffffff;   /* Ensures a clean white background */
+    color: #333;                 /* Sets a standard dark text color */
+    cursor: pointer;
+
+    /* --- Custom Dropdown Arrow --- */
+    -webkit-appearance: none;    /* Removes default styling on Safari/Chrome */
+    -moz-appearance: none;       /* Removes default styling on Firefox */
+    appearance: none;            /* Removes default styling on other browsers */
+    /* A clean, modern SVG for the dropdown arrow */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%235f6368" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 1em;
+}
+
+.save-lang-btn {
+    /* Style similarly to your existing .send-report-btn */
+    background: var(--heading-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 32px;
+    min-width: 62px;
+    padding: 0px 12px;
+    transition: background-color 0.3s ease;
+    color: white;
+    float: right; /* Aligns button to the right side */
+}
+
+body.dark-mode .save-lang-btn {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* Clear the float for any elements that might follow */
+.modal-body form::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#language-overlay {
+    /* 1. Change display to flex to enable alignment properties */
+    display: none; 
+    
+    /* This correctly centers the content horizontally */
+    justify-content: center;
+
+    /* 2. Change align-items to push content to the bottom */
+    align-items: flex-end;     
+    
+    position: fixed;
+    top: 0; /* Use top and left for clarity */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#language-popup {
+    background: #ffffff;
+    color: #17181b;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+}
+
+.fade-in-token {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ellipsis {
+    0% {
+        content: ".";
+    }
+    33% {
+        content: "..";
+    }
+    66% {
+        content: "...";
+    }
+}
+
+
+@media (hover: hover) {
+
+    .directions-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Dark mode hover effect for menu items */
+.dark-mode .dropdown-menu button:hover {
+    background-color: #3a3a3c; /* Lighter dark background on hover */
+}
+
+.dropdown-menu button:hover {
+    background-color: #f5f5f5;
+}
+
+.dark-mode .language-toggle-btn:hover {
+    background-color: var(--background-shade-dark);
+}
+
+.language-toggle-btn:hover {
+    background-color: var(--background-shade-dark); 
+    border-radius: var(--base-border-radius);
+}
+
+body.dark-mode .send-btn:hover {
+    background: #c7c7c7;
+}
+
+.has-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.response-actions .icon-button:hover {
+    opacity: 1;
+}
+
+.cta-button:hover { background-color: var(--cta-color-hover); }
+.icon-button:hover { color: var(--text-color-primary); background-color: var(--background-shade-dark); }
+.icon-button-about:hover { color: var(--text-color-primary); background-color: var(--background-shade-dark); }
+.send-btn:hover { background: #333; }
+
+}
+
+.discover-btn {
+    /* Style similarly to your existing .send-report-btn */
+    background: var(--heading-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    height: 32px;
+    min-width: 62px;
+    padding: 0px 12px;
+    transition: background-color 0.3s ease;
+    color: white;
+    float: right; /* Aligns button to the right side */
+}
+
+body.dark-mode .discover-btn  {
+    background: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode #hidden-gems-overlay .modal-content p {
+    color: #000000; /* Darker text color */
+}
+
+
+/* In style.css */
+.circuit-link-wrapper {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+    margin: 0px  0px 30px 0px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.circuit-link-wrapper:hover {
+    background-color: var(--hover-bg-color);
+}
+
+.circuit-link-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    
+    background-color: #1a1a1a; /* Black for light mode */
+    
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+/* 2. Override the color when .dark-mode is active */
+.dark-mode .circuit-link-icon {
+    background-color: #f0f0f0; /* White for dark mode */
+}
+.circuit-link-text .title {
+    font-weight: 500;
+    color: var(--text-color-primary);
+}
+
+.circuit-link-text .subtitle {
+    font-size: 0.85rem;
+    font-weight: 300;
+}
+
+.circuit-link-arrow {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0; /* Prevents the arrow from shrinking */
+
+    /* Use the same theme-aware color as your other icons */
+    background-color: var(--icon-color);
+
+    /* Use a mask for the arrow icon */
+    mask-image: url('/icons/arrow-right.svg');
+    -webkit-mask-image: url('/icons/arrow-right.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    /* This is the magic line that pushes the arrow to the right */
+    margin-left: auto;
+}
+
+
+/* In style.css */
+
+.circuit-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    margin-left: 7px;
+}
+
+.circuit-header-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    background-color: var(--text-color-primary);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.circuit-header-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color-primary);
+}
+
+.timeline-wrapper {
+    position: relative;
+    /* The vertical bar is the left border */
+    border-left: 5px solid #D9D9D9;
+    /* Space between the bar and the text */
+    padding-left: 25px; 
+    /* Space for the top and bottom circles */
+    margin-left: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* The top circle */
+.timeline-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    /* Position it over the border line */
+    left: -15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 5px solid #D9D9D9;
+    background-color: var(--background-color);
+}
+
+/* The bottom circle (hidden by default) */
+.timeline-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 5px solid #D9D9D9;
+    background-color: var(--background-color);
+    display: none; /* Hidden initially */
+}
+
+/* When the timeline is complete, show the bottom circle */
+.timeline-wrapper.timeline-complete::after {
+    display: block;
+}
+
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .chat-ui { justify-content: center; }
+    .cta-button { font-size: 0.8rem; }
+
+    
+
+    .suggestions-dropdown {
+    display: flex;
+}
+    .suggestions-dropdown.hide{
+    display: none;
+}
+
+
+    body.chat-active .chat-ui {
+        padding-bottom: 140px; /* More padding for mobile */
+    }
+
+    .user-query-pill {
+        font-size: 16px;
+    }
+
+
+    .audio-title {
+        font-size: 14px;
+    }
+
+    body.chat-active .chat-log {
+    display: block;
+    padding-top: 60px; 
+    padding-bottom: 0px;
+    }
+
+
+    .icon-button img {
+        width: 20px; height: 20px;
+    }
+
+
+
+    .map-container {
+        width: 100%;
+        margin-top: 12px;
+        border-radius: 8px;
+        z-index: 0; /* Important for some mapping libraries */
+        margin-bottom: 50px;
+    }
+
+    .modal-overlay {
+        /* On mobile, align items to the bottom */
+        align-items: flex-end;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+        /* Remove bottom border radius for the slide-up effect */
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        /* Start off-screen */
+        transform: translateY(100%);
+        transition: transform 0.3s ease-out; /* Add smooth transition for the slide */
+        opacity: 1; /* Opacity is not needed for slide effect */
+    }
+
+    .modal-overlay.active .modal-content {
+        /* Slide into view */
+        transform: translateY(0);
+    }
+
+
+}
+
+.response-text * + * {
+  margin-top: 14px; 
+}
+p + ul {
+  margin-top: 0.3rem !important; 
+  padding-left: 1.25rem;
+}
+p:has(+ ul) {
+  margin-bottom: 0; /* Reduce the bottom margin to bring the list closer */
+}
+
+@media (max-width: 480px) {
+    body { padding: 0px; }    .chat-ui { padding: var(--spacing-sm); padding-bottom: var(--spacing-lg); }
+
+    .input-form {
+        padding: 12px 8px;
+    }
+
+    .input-form input[type="text"] {
+        padding: 8px 2px;
+    }
+
+    .icon-button, .cta-button, .send-btn { height: 40px; }
+    
+    .cta-button { padding: 0 var(--spacing-sm); font-size: 0.7rem; }
+    
+    body.chat-active .chat-ui {
+        padding-bottom: 100px; /* Even more padding for smallest screens */
+    }
+
+    .model-response {
+        gap: 5px;
+        max-width: 100%;
+        scroll-margin-top: 150px;
+    }
+
+
+    .audio-title {
+        font-size: 14px;
+    }
+
+    .model-response.loading {
+        font-size: 16px; 
+    }
+
+
+    .icon-button img {
+        width: 20px; height: 20px;
+    }
+
+
+    .suggestion-buttons-desktop {
+        gap: 10px;
+    }
+
+
+}
+
+
+@media (min-width: 1024px) {
+
+    /* For WebKit-based browsers (Chrome, Safari, Edge) */
+    ::-webkit-scrollbar {
+        width: 12px; /* Width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #2c2c2c; /* Color of the tracking area */
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #555; /* Color of the scroll thumb */
+        border-radius: 10px; /* Roundness of the scroll thumb */
+        border: 3px solid #2c2c2c; /* Creates padding around the thumb */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #888; /* Color of the thumb on hover */
+    }
+
+    /* For Firefox */
+    /* Note: Firefox offers less customization than WebKit */
+    * {
+        scrollbar-width: thin; /* "auto" or "thin" */
+        scrollbar-color: #555 #2c2c2c; /* thumb-color track-color */
+    }
+}

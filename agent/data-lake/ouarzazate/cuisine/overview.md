@@ -1,0 +1,5 @@
+### Overview of Ouarzazate's Cuisine
+
+The provided documents describe the cuisine of Ouarzazate as featuring classic Moroccan dishes influenced by its southern, pre-Saharan location. The quintessential Moroccan stew, Tagine, is a cornerstone of every menu, with popular local versions including lamb with prunes and almonds or chicken with preserved lemons. Couscous is also served widely, and a unique regional specialty is Madfouna, a large, stuffed flatbread nicknamed "Amazigh Pizza". Other common dishes include grilled Brochettes (kebabs), Harira soup, and dates from the nearby Draa Valley, which are used in many dishes.
+
+For dining, the region offers several unique experiences. Many historic Kasbahs have been converted into hotels with restaurants, allowing for a meal within the ancient mudbrick walls. For an authentic home-cooked taste, many family-run Riads and Guesthouses offer traditional meals, often available to non-guests by reservation. The modern town center also provides a variety of restaurants, from traditional Moroccan eateries to simple cafes perfect for a quick bite.

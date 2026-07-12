@@ -1,0 +1,4 @@
+### The Saadian Golden Age
+
+Taroudant's most glorious period was in the 16th century when it was the capital of the Saadian dynasty, under Sultan Mohammed al-Sheikh. The Saadians used Taroudant as a base to defend against the Portuguese presence in nearby Agadir and to establish their power over southern Morocco. During this time, the city prospered, becoming a major hub for the trade of goods like sugar, gold, and salt.
+Taroudant's prosperity declined in the 18th century after the port of Agadir was closed to foreign trade by the Alaouite dynasty. The city receded from the national stage, turning inward and preserving its traditional character. It was a center of fierce resistance against the French protectorate in the early 20th century, holding out against colonial forces until 1917.

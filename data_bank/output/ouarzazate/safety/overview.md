@@ -1,0 +1,3 @@
+### Overview of Ouarzazate's Emergency & Medical Services
+
+These documents contain key safety and medical information for Ouarzazate. The files list important emergency contact numbers, including 190 for the Police, 150 for both Ambulance and Fire Department services, and 177 for the Royal Gendarmerie, which operates outside of major cities. Additionally, two local hospitals are identified: Sidi Hssain Bencer and Bougafer.

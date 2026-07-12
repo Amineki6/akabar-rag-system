@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+        --primary-font: "Figtree", sans-serif;
+
+    /* Colors */
+    --background-color: #FAF9F5;
+    --heading-color: #160211;
+    --text-color-primary: #160211;
+    --text-color-secondary: #57534D;
+    --input-placeholder-color: #A5A09C;
+    --background-shade-dark: #f5f2f2;
+    --chip-bg-color: #FFFFFF;
+    --input-bg-color: #FFFFFF;
+    --cta-color: #E67E22;
+    --cta-color-hover: #D35400;
+
+    /* Sizing & Spacing */
+    --spacing-xxs: 4px;
+    --spacing-xs: 8px;
+    --spacing-sm: 12px;
+    --spacing-md: 20px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+    --spacing-xxxl: 64px;
+
+    /* Borders */
+    --base-border-radius: 8px;
+
+    --n-spacing: 0.25rem; /* 4px */
+}
+
+
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--background-color);
+    color: var(--heading-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Pushes .header-left and .header-right apart */
+    background-color: var(--background-color);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    position: fixed;
+    height: 64px;
+
+}
+
+/* This container holds the right-side buttons */
+/* Add this to style-about.css */
+.header-right {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    max-height: 64px;
+}
+
+
+.icon-button {
+    display: flex; align-items: center; gap: var(--spacing-xxs);
+    background: transparent; border: 1px solid transparent; cursor: pointer;
+    font-family: var(--primary-font); font-size: 0.9rem; font-weight: 400;
+    color: black; height: 32px; padding: 0px 5px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dark-mode .icon-button {
+    color: rgb(255, 255, 255);
+}
+
+#titles {
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.icon-button img { width: 20px; height: 20px; }
+.icon-button:hover:not(#chat-icon) { color: black; background-color: var(--background-shade-dark); }
+
+a {
+  text-decoration: none;
+}
+
+.container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.sub-title {
+    font-weight: 400;
+    font-size: 1.0rem;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+
+.logo-written img{
+    height: 100%;
+    width: auto;
+    margin-right: 8px;
+    max-height: 32px;
+}
+
+.logo-written {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    --background-color: #17181b;
+    --heading-color: #EAEAEA;
+    --text-color-primary: #E0E0E0;
+    --text-color-secondary: #B0B0B0;
+    --background-shade-dark: #2A2A2A;
+}
+
+body.dark-mode .icon-button img:not(#theme-icon) {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.dark-mode .about-us p,
+body.dark-mode .contact p {
+    color: var(--text-color-primary);
+}
+
+body.dark-mode .question-card {
+    background-color: var(--background-color);
+
+}
+
+body.dark-mode .card-icon {
+    background-color: #ffffff;
+    border-radius: 20%;
+}
+
+
+
+body.dark-mode .question-card h3 {
+    color: var(--heading-color);
+}
+
+body.dark-mode .question-card p {
+    color: var(--text-color-secondary);
+}
+
+body.dark-mode .ask-btn {
+    background-color: #EAEAEA;
+    color: #17181b;
+}
+
+body.dark-mode .ask-btn:hover {
+    background-color: #c7c7c7;
+}
+
+body.dark-mode .arrow {
+    background-color: #aeaeae;
+    color: #17181b;
+}
+
+
+
+body.dark-mode .dropdown-menu .icon-button:hover {
+    background-color: #404040;
+}
+
+html[dir="rtl"] .response-text {
+  text-align: right;
+}
+
+html[dir="rtl"] .response-actions {
+  text-align: right;
+}
+
+/* Optional: Adjust spacing for RTL */
+html[dir="rtl"] .response-logo {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+
+
+
+/* Main container for positioning */
+.language-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: var(--primary-font);
+    height: 32px;
+    display: flex;
+    align-items: center;
+
+}
+
+/* The main button that shows the selected language and arrow */
+.language-toggle-btn {
+    display: flex; align-items: center; gap: var(--spacing-xxs);
+    font-family: var(--primary-font); font-size: 0.9rem; font-weight: 400;
+    color: black; height: 32px; padding: 0px 8px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border: none;
+    background: transparent;
+    text-decoration: none;
+    margin: 8px 8px 8px 0px;
+}
+
+.language-toggle-btn:hover {
+    background-color: var(--background-shade-dark); 
+    border-radius: var(--base-border-radius);
+}
+
+.dark-mode .language-toggle-btn:hover {
+    background-color: var(--background-shade-dark);
+}
+
+
+
+/* Rotates the arrow when the dropdown is open */
+.language-toggle-btn[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+
+/* Styling for the dropdown menu */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 50%; /* ⬅️ Change this from 0 */
+    transform: translateX(-50%); /* ⬅️ Add this line */
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    min-width: 100%;
+    z-index: 1000;
+    margin-top: 5px;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+
+/* Class to show the menu with JavaScript */
+.language-dropdown .dropdown-menu.show {
+    display: block;
+    
+}
+
+/* Styling for the buttons inside the menu */
+.dropdown-menu button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f5f5f5;
+}
+
+/* Dark mode for the main button */
+.dark-mode .language-toggle-btn {
+    background-color: #17181b; /* Dark grey background */
+    color: #f0f0f0;            /* Light text color */
+}
+
+/*
+   The original CSS for creating the arrow was missing,
+   so this rule handles both its creation and dark mode color.
+
+/* Style for the arrow in dark mode */
+.dark-mode .language-toggle-btn::after {
+    border-top-color: #f0f0f0; /* Light arrow color */
+}
+
+/* Dark mode for the dropdown menu */
+.dark-mode .dropdown-menu {
+    background-color: #2f2f2f; /* Very dark background */
+    border-color: #3a3a3c;     /* Slightly lighter border */
+}
+
+/* Dark mode for the buttons inside the menu */
+.dark-mode .dropdown-menu button {
+    color: #f0f0f0; /* Light text color for menu items */
+}
+
+/* Dark mode hover effect for menu items */
+.dark-mode .dropdown-menu button:hover {
+    background-color: #3a3a3c; /* Lighter dark background on hover */
+}
+
+
+.icon-button-chat {
+    padding: 0 5px;
+}
+
+.dark-mode .icon-button-chat {
+    display: flex; 
+    align-items: center; 
+    gap: var(--spacing-xxs);
+    font-family: var(--primary-font); 
+    font-size: 0.9rem; 
+    font-weight: 500;
+    color: white; 
+    height: 44px; 
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dark-mode.icon-button-chat:hover { 
+    color: white; 
+    background-color: var(--background-shade-dark); 
+}
+
+.logo {
+    display: flex; align-items: center; gap: var(--spacing-xxs);
+    background: transparent; border: 1px solid transparent; cursor: pointer;
+    font-family: var(--primary-font); font-size: 0.9rem; font-weight: 400;
+    color: white; height: 32px; padding: 0px 8px;
+    border-radius: var(--base-border-radius);
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border: none;
+    text-decoration: none;
+    margin: 8px;
+    background: black;
+}
+
+.dark-mode .logo {
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+}
+
+
+
+
+
+
+@media (min-width: 1024px) {
+
+    /* For WebKit-based browsers (Chrome, Safari, Edge) */
+    ::-webkit-scrollbar {
+        width: 12px; /* Width of the entire scrollbar */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #2c2c2c; /* Color of the tracking area */
+        border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: #555; /* Color of the scroll thumb */
+        border-radius: 10px; /* Roundness of the scroll thumb */
+        border: 3px solid #2c2c2c; /* Creates padding around the thumb */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #888; /* Color of the thumb on hover */
+    }
+
+    /* For Firefox */
+    /* Note: Firefox offers less customization than WebKit */
+    * {
+        scrollbar-width: thin; /* "auto" or "thin" */
+        scrollbar-color: #555 #2c2c2c; /* thumb-color track-color */
+    }
+}

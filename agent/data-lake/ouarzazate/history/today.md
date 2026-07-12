@@ -1,0 +1,3 @@
+### Ouarzazate Today
+
+Today, Ouarzazate is a thriving city that serves as the "Gateway to the Desert." It is the primary tourist hub for travelers exploring the kasbahs of the south, the Draa Valley, and the dunes of the Sahara. The city successfully blends its ancient role as a crossroads with its modern identity as a cinematic capital, attracting tourists, adventurers, and filmmakers from around the world. In recent years, it has also become home to one of the world's largest solar power plants, adding a new layer to its identity as a center of innovation.

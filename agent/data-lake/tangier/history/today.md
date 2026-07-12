@@ -1,0 +1,5 @@
+### Reunification and Modern Era
+
+Tangier was officially reunified with the rest of the country upon Moroccan independence in 1956, and its international status was revoked. For several decades following independence, the city experienced a period of neglect as the central government focused on other urban centers.
+
+However, since the beginning of the 21st century, Tangier has undergone a dramatic renaissance. Under the impetus of King Mohammed VI, the city has benefited from massive investment and development. This includes the construction of **Tanger Med**, one of the largest ports on the Mediterranean, the establishment of new free-trade zones, and a complete overhaul of the city's infrastructure, including a modernized tourism hub at Tanja Marina Bay. Today, Tangier is a vibrant and rapidly growing economic and cultural center, once again leveraging its strategic position to thrive.

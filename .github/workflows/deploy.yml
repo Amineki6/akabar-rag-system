@@ -1,0 +1,53 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.DO_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "."
+          target: "/home/deployer/app"
+
+      - name: SSH and Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.AWS_HOST }}
+          username: ${{ secrets.DO_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          # Increase timeout for heavy builds
+          timeout: 30m
+          command_timeout: 30m
+          script: |
+            cd /home/deployer/app
+            
+            # 1. Create the .env file from GitHub Secret
+            echo "${{ secrets.PROD_ENV_FILE }}" > .env
+            
+            # 2. Login to Docker Hub (Optional, only if using private images)
+            # docker login -u ... -p ...
+            
+            # 3. Deploy using Modern Docker Compose V2
+            echo "Starting Deployment..."
+            
+            # Shut down carefully to ensure DB saves
+            docker compose -f docker-compose.prod.yaml down
+            
+            # Start up with build
+            docker compose -f docker-compose.prod.yaml up -d --build --remove-orphans
+            
+            # 4. Cleanup space
+            docker image prune -f

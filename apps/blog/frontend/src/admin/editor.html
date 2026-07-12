@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akabar CMS - Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .editor-layout {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        .header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .header h1 {
+            font-family: 'Fraunces', serif;
+            font-weight: 300;
+            font-size: 42px;
+            color: var(--dark);
+            margin: 0;
+            letter-spacing: -1px;
+        }
+        
+        .form-card {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+        .form-group { margin-bottom: 24px; }
+        label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 14px; color: var(--dark); }
+        input[type="text"], textarea { 
+            width: 100%; 
+            padding: 14px 16px; 
+            border: 1px solid var(--border); 
+            border-radius: 8px; 
+            box-sizing: border-box; 
+            font-family: inherit; 
+            font-size: 15px;
+            background: rgba(0,0,0,0.01);
+            transition: all 0.2s;
+        }
+        input[type="text"]:focus, textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+            background: var(--white);
+        }
+        textarea { height: 260px; resize: vertical; line-height: 1.6; }
+        .checkbox-group { display: flex; align-items: center; gap: 8px; margin-top: 32px; padding: 20px; background: rgba(0,0,0,0.02); border-radius: 8px;}
+        
+        .btn {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 100px;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-outline {
+            background: transparent;
+            color: var(--dark);
+            border: 1px solid var(--border);
+        }
+        .btn-outline:hover {
+            background: rgba(0,0,0,0.03);
+            border-color: var(--dark);
+        }
+        .btn-pill {
+            background: var(--orange);
+            color: var(--white);
+            font-size: 15px;
+            padding: 14px 28px;
+        }
+        .btn-pill:hover { background: #d0694e; }
+        
+        #status-msg { margin-bottom: 24px; padding: 16px; border-radius: 8px; display: none; font-size: 14px; font-weight: 500;}
+        .success { background-color: rgba(98, 184, 122, 0.15); color: #3a8a50; border: 1px solid rgba(98, 184, 122, 0.3); }
+        .error { background-color: rgba(217, 83, 79, 0.15); color: #d9534f; border: 1px solid rgba(217, 83, 79, 0.3); }
+    </style>
+</head>
+<body>
+
+    <!-- Small simplified nav -->
+    <nav style="position:static; padding: 20px 40px; border-bottom: 1px solid var(--border);">
+      <div class="nav-left">
+        <span class="logo">Akabar CMS</span>
+      </div>
+      <div class="nav-right" style="display:flex; gap:12px;">
+        <a href="/admin/dashboard.html" class="btn btn-outline" style="padding: 6px 16px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Dashboard
+        </a>
+        <button class="btn btn-outline" id="logout-btn" style="padding: 6px 16px;">Logout</button>
+      </div>
+    </nav>
+
+    <div class="editor-layout">
+        <div class="header">
+            <h1>Create New Post</h1>
+        </div>
+
+        <div id="status-msg"></div>
+
+        <div class="form-card">
+            <form id="editor-form">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="slug">Slug (System Generated URL)</label>
+                    <input type="text" id="slug" required readonly style="background-color: rgba(0,0,0,0.03); color: var(--muted); cursor: not-allowed;">
+                </div>
+
+                <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                    <div>
+                        <label for="subtitle">SubTitle</label>
+                        <input type="text" id="subtitle" placeholder="e.g., A deep dive into culture">
+                    </div>
+                    <div>
+                        <label for="image_url">Image URL</label>
+                        <input type="text" id="image_url" placeholder="assets/images/cover.jpg">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="excerpt">Excerpt (Short preview description)</label>
+                    <textarea id="excerpt" style="height: 100px;"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Full Markdown Content</label>
+                    <textarea id="content" required placeholder="Write your story here..."></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="is_published" style="width: 18px; height: 18px; cursor: pointer;">
+                    <label for="is_published" style="margin: 0; margin-right: 24px; cursor: pointer;">Publish immediately</label>
+                    
+                    <input type="checkbox" id="is_featured" style="width: 18px; height: 18px; cursor: pointer;">
+                    <label for="is_featured" style="margin: 0; color: var(--orange); font-weight: 600; cursor: pointer;">⭐ Mark as Featured Story</label>
+                </div>
+
+                <button type="submit" class="btn btn-pill" style="margin-top: 32px; width: 100%; justify-content: center;">Save Post</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 1. The Bouncer
+        const token = localStorage.getItem('adminToken');
+        if (!token) {
+            window.location.href = '/admin/';
+        }
+
+        // 2. Handle Logout
+        document.getElementById('logout-btn').addEventListener('click', () => {
+            localStorage.removeItem('adminToken');
+            window.location.href = '/admin/';
+        });
+
+        // Auto-generate Slug from Title
+        document.getElementById('title').addEventListener('input', function(e) {
+            if (!editingSlug) { 
+                const slugInput = document.getElementById('slug');
+                slugInput.value = e.target.value
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, '-')
+                    .replace(/(^-|-$)+/g, '');
+            }
+        });
+
+        // 3. Check if we are in Edit mode
+        const urlParams = new URLSearchParams(window.location.search);
+        const editingSlug = urlParams.get('slug');
+        
+        if (editingSlug) {
+            document.querySelector('.header h1').innerText = 'Edit Post';
+            loadPostData(editingSlug);
+        }
+
+        async function loadPostData(slug) {
+            try {
+                const response = await fetch(`/api/blogs/${slug}`);
+                if (response.ok) {
+                    const post = await response.json();
+                    document.getElementById('title').value = post.title;
+                    document.getElementById('slug').value = post.slug;
+                    document.getElementById('subtitle').value = post.subtitle || '';
+                    document.getElementById('image_url').value = post.image_url || '';
+                    document.getElementById('excerpt').value = post.excerpt || '';
+                    document.getElementById('content').value = post.content || '';
+                    document.getElementById('is_published').checked = post.is_published;
+                    document.getElementById('is_featured').checked = post.is_featured || false;
+                } else {
+                    alert('Failed to load post for editing.');
+                }
+            } catch (error) {
+                console.error('Error fetching post:', error);
+                alert('System error loading post.');
+            }
+        }
+
+        // 4. Handle Form Submission
+        document.getElementById('editor-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const statusMsg = document.getElementById('status-msg');
+            statusMsg.style.display = 'none';
+
+            const isPublished = document.getElementById('is_published').checked;
+            const postData = {
+                title: document.getElementById('title').value,
+                slug: document.getElementById('slug').value,
+                subtitle: document.getElementById('subtitle').value,
+                image_url: document.getElementById('image_url').value,
+                excerpt: document.getElementById('excerpt').value,
+                content: document.getElementById('content').value,
+                is_published: isPublished,
+                is_featured: document.getElementById('is_featured').checked
+            };
+
+            const url = editingSlug ? `/api/blogs/${editingSlug}` : '/api/blogs/';
+            const method = editingSlug ? 'PUT' : 'POST';
+
+            try {
+                const response = await fetch(url, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}` 
+                    },
+                    body: JSON.stringify(postData)
+                });
+
+                if (response.ok) {
+                    // Hide the form completely
+                    document.getElementById('editor-form').style.display = 'none';
+                    
+                    // Show massive success screen
+                    statusMsg.innerHTML = `
+                        <div style="text-align: center; padding: 60px 20px;">
+                            <div style="font-size: 80px; margin-bottom: 24px;">✅</div>
+                            <h2 style="font-family: 'Fraunces', serif; margin: 0; color: #3a8a50; font-size: 28px;">
+                                ${isPublished ? 'Post Published Successfully!' : 'Draft Saved Successfully!'}
+                            </h2>
+                            <p style="color: var(--muted); margin-top: 16px; font-size: 15px;">
+                                Taking you back to the Dashboard...
+                            </p>
+                        </div>
+                    `;
+                    statusMsg.className = ''; // Remove default success border to make it full width
+                    statusMsg.style.background = 'transparent';
+                    statusMsg.style.border = 'none';
+                    statusMsg.style.display = 'block';
+                    
+                    // Force redirect after 2 seconds
+                    setTimeout(() => { 
+                        window.location.href = '/admin/dashboard.html'; 
+                    }, 2000);
+                } else if (response.status === 401) {
+                    localStorage.removeItem('adminToken');
+                    window.location.href = '/admin/';
+                } else {
+                    const errorData = await response.json();
+                    statusMsg.textContent = errorData.detail || 'Failed to save post.';
+                    statusMsg.className = 'error';
+                    statusMsg.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                statusMsg.textContent = 'A network error occurred.';
+                statusMsg.className = 'error';
+                statusMsg.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

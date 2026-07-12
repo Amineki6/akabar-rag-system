@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>akabar</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7/dist/wavesurfer.min.js"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        script-src 'self' https://api.mapbox.com; 
+        style-src 'self' https://api.mapbox.com 'unsafe-inline' https://fonts.googleapis.com; 
+        worker-src 'self' blob:;
+        img-src 'self' data: https://api.mapbox.com;
+        connect-src 'self' https://api.mapbox.com;
+        font-src 'self' https://api.mapbox.com https://fonts.gstatic.com;
+        frame-src 'self';
+    ">
+</head>
+  <body>
+    <div id="welcome-overlay">
+      <div id="welcome-popup">
+        <div class="welcome-message">Welcome on Akabar</div>
+        <div class="welcome-submessage">Please select a display language</div>
+
+        <select id="language-select-dropdown" aria-label="Language Selector">
+          <option value="en" selected>English</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+          <option value="pt">Portuguese</option>
+        </select>
+
+        <div type="button" id="confirm-language-btn">Continue</div>
+
+      </div>
+    </div>
+
+    
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <div class="main-header">
+      <div class="header-left">
+          <button type="button" class="icon-button" id="new-convo-btn" aria-label="New Conversation">
+              <img src="/plus-circle-o.svg" style="width: 20px;"> <span class="header-button-text">New</span>
+          </button>
+      </div>
+
+      <div class="header-right">
+          <div class="language-dropdown">
+              <button type="button" class="language-toggle-btn" id="language-toggle-btn" aria-label="Toggle language" aria-haspopup="true" aria-expanded="false">
+                  <span id="selected-language-text">English</span>
+                  
+              </button>
+              
+              <div class="dropdown-menu" id="language-dropdown-menu" role="menu">
+                  <button type="button" role="menuitem" data-lang="en">English</button>
+                  <button type="button" role="menuitem" data-lang="fr">French</button>
+                  <button type="button" role="menuitem" data-lang="es">Spanish</button>
+                  <button type="button" role="menuitem" data-lang="pt">Portuguese</button>
+                  <button type="button" role="menuitem" data-lang="ar">Arabic</button>
+              </div>
+          </div>
+          <button type="button" class="icon-button" id="theme-toggle-btn" aria-label="Toggle dark mode">
+              <img src="/moon-o.svg" style="width: 30px;" id="theme-icon">
+          </button>
+          <a class="icon-button-about" href="about.html">About</a>
+          <a  href="/" class="logo-written" id="white-logo" aria-label="Toggle dark mode">
+              <img src="/logo-written.svg"  id="theme-icon">
+        </a>
+        <a  href="/" class="logo-written" id="black-logo" aria-label="Toggle dark mode">
+              <img src="/logo-written-black.svg"  id="theme-icon">
+        </a>
+      </div>
+    </div>
+
+    <main class="chat-ui">
+      <div class="chat-log"></div>
+
+      <div class="chat-input-container">
+        <div class="orb-container"></div>
+        
+        <div class="input-container">
+
+            <form class="input-form">
+              <div class="input-row">
+                <input type="text" maxlength="2000" placeholder="Ask anything about Morocco..." aria-label="Chat input" id="chat-input" data-translate="ask-anything" autocomplete="off" autocorrect="off" spellcheck="false">
+              </div>
+              <div class="actions-row">
+                <div class="actions-left">
+                    <div aria-label="Explore hidden gems" id="explore-hidden" class="send-btn">
+                      <span class="explore-icon-mask" style="--icon-url: url('/question_mark.svg');"></span>
+                    </div>
+                    <div aria-label="Copy last message" id="pick-language-but" class="send-btn">
+                      <span class="language-icon-mask" style="--icon-url: url('/language.svg');"></span>
+                    </div>
+                    
+                    
+                </div>
+                <div class="actions-right">
+                    <div type="submit" aria-label="Send message" id="sendMessageButton-top" class="send-btn">
+                      <span class="send-icon-mask" style="--icon-url: url('/Send.svg');"></span>
+                    </div>
+                </div>
+              </div>
+            
+              
+          </form>
+
+        </div>
+        
+
+      </div>
+      
+        
+        <div class="suggestion-buttons-desktop">
+          <button type="button" class="icon-button input" id="attractions-btn">
+            <span class="icon-mask" style="--icon-url: url('/star.svg');"></span>
+            <span data-translate="attractions">Attractions</span>
+          </button>
+          <button type="button" class="icon-button input" id="history-btn">
+            <span class="icon-mask" style="--icon-url: url('/open-book.svg');"></span>
+            <span data-translate="history">History</span>
+          </button>
+          <button type="button" class="icon-button input" id="emergency-btn">
+            <span class="icon-mask" style="--icon-url: url('/phone.svg');"></span>
+            <span data-translate="emergency">Emergency</span>
+          </button>
+          <button type="button" class="icon-button input" id="transport-btn">
+            <span class="icon-mask" style="--icon-url: url('/buss.svg');"></span>
+            <span data-translate="transport">Transport</span>
+          </button>
+        </div>
+
+
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Report Response</div>
+                <button id="close-btn" class="close-btn" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="report-form">
+                    <label for="report-reason">Please provide a reason for your report:</label>
+                    <textarea id="report-reason" name="reason" rows="5" placeholder=""></textarea>
+                    <button type="submit" class="send-report-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="language-modal-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" data-translate="select_language_title">Select Language</div>
+                <button id="lang-close-btn" class="close-btn" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="language-form">
+                    <label for="language-select" data-translate="choose_language_label">Choose a language:</label>
+                    <select id="language-select" name="language">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="pt">Português</option>
+                    </select>
+                    <button type="submit" class="save-lang-btn" data-translate="save_button">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="hidden-gems-overlay" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Explore Hidden Gems</h2>
+                <button id="hidden-gems-close-btn" class="close-btn">&times;</button>
+            </div>
+
+            <p>Discover unique and interesting circuits that showcase the hidden gems of Morocco.</p>
+            <button id="discover-circuits-btn" class="discover-btn">Explore Circuits &rarr;</button>
+          </div>
+    </div>
+    
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>

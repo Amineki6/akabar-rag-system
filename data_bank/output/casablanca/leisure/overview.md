@@ -1,0 +1,7 @@
+### Overview of Casablanca's Attractions
+
+The provided documents describe Casablanca's attractions as a mix of historical landmarks, modern districts, and diverse leisure activities. The city's most iconic site is the Hassan II Mosque, one of the largest in the world and one of the few in Morocco open to non-Muslims. The city's unique architectural heritage can be explored in the Art Deco District around Mohammed V Square. Casablanca features two distinct medinas: the historic Old Medina, which offers an authentic, bustling market experience, and the French-built Habous Quarter (New Medina), known for its orderly streets and high-quality craft shops. Cultural sites also include the Museum of Moroccan Judaism, the Musée Abderrahman Slaoui, and the Villa des Arts.
+
+Popular neighborhoods for tourists include the bustling City Center, the trendy and cosmopolitan districts of Gauthier and Maarif, and the Corniche (Ain Diab), the city's seaside entertainment area. Shopping ranges from the traditional souks and the Marché Central, famous for its fresh seafood, to modern districts like Maarif and large shopping centers such as Morocco Mall, one of the largest in Africa.
+
+For entertainment, the Corniche is the heart of the city's nightlife, packed with nightclubs and beach clubs, while the Gauthier and Maarif districts offer more sophisticated cocktail bars and lounges. For relaxation, visitors can enjoy large green spaces like the Parc de la Ligue Arabe.

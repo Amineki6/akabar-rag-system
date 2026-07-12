@@ -1,0 +1,2 @@
+* **Skoura Palm Grove (Palmeraie de Skoura)**
+    A vast and lush oasis located about 40 kilometers east of Ouarzazate. This beautiful palm grove is dotted with numerous historic kasbahs and offers a tranquil escape into a greener landscape.

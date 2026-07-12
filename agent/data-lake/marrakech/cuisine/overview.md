@@ -1,0 +1,5 @@
+### Overview of Marrakech's Cuisine
+
+Marrakech's culinary scene, which is known for its unique regional specialties as well as classic Moroccan dishes. The city's quintessential dish is the Tangia, a slow-cooked meat stew prepared in a clay urn, often in the hot ashes of a local hammam furnace. Other famous local foods include Mechoui (spit-roasted lamb) and Babbouche (snail soup), which is a notable street food found in Djemaa el-Fna. Alongside these, Marrakech offers a wide variety of national staples, such as Tagine, Couscous, Pastilla, and Harira soup.
+
+For dining, the files recommend several distinct areas. At dusk, the Djemaa el-Fna square transforms into a massive open-air restaurant with numerous food stalls, offering an energetic setting for street food. The alleyways of the Medina are filled with traditional restaurants, and many riads offer refined, authentic dining experiences in tranquil courtyards. For a more contemporary or international meal, the new city district of Gueliz has a wide selection of modern restaurants and trendy cafes. Additionally, the souks are home to small, hidden eateries that serve authentic and affordable local food.

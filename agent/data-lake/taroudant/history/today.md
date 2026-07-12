@@ -1,0 +1,1 @@
+Today, Taroudant has maintained its authenticity. It is a vibrant market town that serves as the economic hub for the surrounding region, offering visitors a window into a part of Morocco that has largely been untouched by mass tourism.

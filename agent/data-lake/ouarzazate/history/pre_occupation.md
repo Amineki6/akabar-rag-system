@@ -1,0 +1,3 @@
+### The Glaoui Era
+
+In the late 19th and early 20th centuries, the region came under the domination of the powerful **Glaoui clan**. Led by the brothers Madani and Thami El Glaoui, the family established a vast feudal territory across southern Morocco. The Taourirt Kasbah became one of their most important strongholds, serving as a residence and a base from which they controlled the trade of salt, saffron, and other goods. The Glaoui's immense wealth and political power, often exercised in alliance with the French, allowed them to expand the kasbah into the grand palace-like structure seen today.

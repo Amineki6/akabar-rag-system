@@ -1,0 +1,42 @@
+{
+  "AGD_KARTING": {
+    "name": "Morocco Racing Kart Agadir",
+    "lat": 30.431922784645003,
+    "lon": -9.54289938412469
+  },
+  "AGD_TAMRI_DUNES": {
+    "name": "Dunes of Tamri",
+    "lat": 30.76306524396103,
+    "lon": -9.825973751127147
+  },
+  "AGD_LION_PARK": {
+    "name": "Lion Agadir Park",
+    "lat": 30.391281413722105, 
+    "lon": -9.478318839184396
+  },
+  "AGD_TAGHAZOUT": {
+    "name": "Taghazout",
+    "lat": 30.545310833833735,
+    "lon": -9.70945448040129
+  },
+  "AGD_TAMRI": {
+    "name": "Tamri",
+    "lat": 30.71345001983468,
+    "lon": -9.857568170829802
+  },
+  "AGD_IMOURANE": {
+    "name": "Imourane",
+    "lat": 30.514264639835176,
+    "lon": -9.688165774159641
+  },
+  "AGD_MOHAMEDV_MOSQUE": {
+    "name": "La Mosquée Mohamed V",
+    "lat": 30.422327793459885, 
+    "lon": -9.592419044736518
+  },
+  "AGD_LOUBNANE_MOSQUE": {
+    "name": "Loubnane Mosque",
+    "lat": 30.423731676837804, 
+    "lon": -9.600452438184478
+  }
+}

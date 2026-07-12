@@ -1,0 +1,7 @@
+### Overview of Rabat's History
+
+The provided documents trace the history of Rabat from its founding in the 12th century when the Almohad Caliph Abd al-Mu'min established a fortified monastery, or 'ribat', on the site. The city experienced a golden age under his grandson, Yaqub al-Mansur, who named it Ribat al-Fath ("The Fortress of Victory") and began constructing a colossal mosque, of which the iconic Hassan Tower is the most prominent remnant.
+
+After a long period of decline, Rabat's fortunes were revived in the early 17th century by Moriscos expelled from Spain, who established the independent Republic of Salé, a notorious base for Barbary Pirates. This republic was eventually brought under the control of the Alaouite dynasty in the late 17th century.
+
+Rabat's modern era began in 1912 when the French Protectorate's administrator, Hubert Lyautey, designated it as the administrative capital. He commissioned the design of a new administrative quarter, the Ville Nouvelle, which blended modern architecture with the city's historic core. Following Morocco's independence in 1956, King Mohammed V decided to keep Rabat as the nation's capital. In 2012, UNESCO recognized the city's unique blend of ancient and modern architecture by granting it World Heritage status. The provided file on special events contained no information.
