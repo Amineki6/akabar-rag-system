@@ -1,6 +1,6 @@
 # Akabar RAG System
 
-[![Pitch Document to the Ministry of Tourism](web/public/1.jpg)](https://amineki6.github.io/presenatations/Akabar%20-%20Official%20Document.pdf)
+### [Pitch Document to the Ministry of Tourism in Morocco](https://amineki6.github.io/presenatations/Akabar%20-%20Official%20Document.pdf)
 
 Welcome to the **Akabar RAG System** repository! This project is a comprehensive Retrieval-Augmented Generation (RAG) platform, designed with a microservices architecture and built to be deployed seamlessly on Kubernetes.
 
